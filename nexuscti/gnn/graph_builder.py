@@ -4,6 +4,7 @@ for Cyber Threat Intelligence.
 """
 
 from typing import Dict, List, Tuple, Any, Optional
+from contextlib import contextmanager
 import networkx as nx
 import torch
 import numpy as np
@@ -146,11 +147,15 @@ class ThreatKnowledgeGraph:
     def find_node_by_indicator(self, indicator_str: str) -> Optional[Node]:
         """
         Searches for an existing node matching an IOC (IP, domain, hash, or CVE).
-        Prioritizes exact matches, then alias matches, then clean substring matches.
+        Strict exact-match indicator lookup: eliminates substring containment
+        matching to prevent false-positive leakage (e.g. '185.141.63.12' falsely matching '185.141.63.120').
         """
+        if not indicator_str:
+            return None
+
         indicator_str_clean = indicator_str.strip().lower().replace("[.]", ".").replace("[:]", ":")
 
-        # Pass 1: Exact match on name or ID
+        # Pass 1: Exact match on normalized name or ID
         for node in self.raw_nodes:
             node_clean = node.name.strip().lower().replace("[.]", ".").replace("[:]", ":")
             if indicator_str_clean == node_clean or indicator_str_clean == node.id.lower():
@@ -160,15 +165,15 @@ class ThreatKnowledgeGraph:
         for node in self.raw_nodes:
             aliases = node.metadata.get("aliases", [])
             for alias in aliases:
-                if indicator_str_clean == alias.lower():
+                alias_clean = alias.strip().lower().replace("[.]", ".").replace("[:]", ":")
+                if indicator_str_clean == alias_clean:
                     return node
 
-        # Pass 3: Substring containment (only for strings >= 4 chars to avoid false positives)
-        if len(indicator_str_clean) >= 4:
-            for node in self.raw_nodes:
-                node_clean = node.name.strip().lower().replace("[.]", ".").replace("[:]", ":")
-                if len(node_clean) >= 4 and (indicator_str_clean in node_clean or node_clean in indicator_str_clean):
-                    return node
+        # Pass 3: Exact match on sanitized IOC node ID convention (e.g. ioc_ip_185_141_63_12)
+        sanitized = indicator_str_clean.replace(".", "_").replace(":", "_").replace("-", "_")
+        for node in self.raw_nodes:
+            if node.id.lower() == f"ioc_{sanitized}" or node.id.lower().endswith(f"_{sanitized}"):
+                return node
 
         return None
 
@@ -202,3 +207,47 @@ class ThreatKnowledgeGraph:
         )
         self._build_tensors()
         return new_id
+
+    def remove_temporary_ioc_node(self, node_id: str) -> bool:
+        """
+        Removes a dynamically added temporary IOC node and restores graph tensors.
+        Base graph nodes (novel != True) cannot be removed.
+        """
+        if node_id not in self.node_dict:
+            return False
+        node = self.node_dict[node_id]
+        if not node.metadata.get("novel", False):
+            return False
+
+        self.raw_nodes = [n for n in self.raw_nodes if n.id != node_id]
+        self.node_id_to_idx = {n.id: i for i, n in enumerate(self.raw_nodes)}
+        self.idx_to_node_id = {i: n.id for i, n in enumerate(self.raw_nodes)}
+        del self.node_dict[node_id]
+        if self.nx_graph.has_node(node_id):
+            self.nx_graph.remove_node(node_id)
+        self._build_tensors()
+        return True
+
+    @contextmanager
+    def isolated_graph_context(self):
+        """
+        Context manager ensuring the graph state (raw_nodes, nx_graph, node_dict, tensors)
+        is strictly restored to its initial state upon exiting, preventing cross-test pollution.
+        """
+        initial_node_count = len(self.raw_nodes)
+        initial_edge_count = self.nx_graph.number_of_edges()
+        initial_raw = list(self.raw_nodes)
+        initial_nx = self.nx_graph.copy()
+        initial_dict = dict(self.node_dict)
+        initial_id_to_idx = dict(self.node_id_to_idx)
+        initial_idx_to_id = dict(self.idx_to_node_id)
+        try:
+            yield self
+        finally:
+            if len(self.raw_nodes) != initial_node_count or self.nx_graph.number_of_edges() != initial_edge_count:
+                self.raw_nodes = list(initial_raw)
+                self.nx_graph = initial_nx
+                self.node_dict = initial_dict
+                self.node_id_to_idx = initial_id_to_idx
+                self.idx_to_node_id = initial_idx_to_id
+                self._build_tensors()

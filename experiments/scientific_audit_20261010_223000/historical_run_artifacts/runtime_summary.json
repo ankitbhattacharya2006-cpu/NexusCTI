@@ -1,0 +1,23 @@
+{
+  "Config A (Vector-only)": {
+    "total_sec": 0.004,
+    "avg_per_case_sec": 0.0003
+  },
+  "Config B (Graph-only)": {
+    "total_sec": 0.015,
+    "avg_per_case_sec": 0.0013
+  },
+  "Config C (GNN-only)": {
+    "total_sec": 0.002,
+    "avg_per_case_sec": 0.0002
+  },
+  "Config D (Graph + RAG)": {
+    "total_sec": 0.019,
+    "avg_per_case_sec": 0.0016
+  },
+  "Config E (Full Hybrid)": {
+    "total_sec": 0.034,
+    "avg_per_case_sec": 0.0029
+  },
+  "overall_suite_runtime_sec": 0.075
+}

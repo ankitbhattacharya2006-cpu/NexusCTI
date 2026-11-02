@@ -1,0 +1,6 @@
+configuration,task_a_top1_expected_pct,task_a_top3_expected_pct,task_a_top5_expected_pct,task_a_mrr,task_a_hallucinations,task_b_abstention_pct,task_b_false_attributions,runtime_sec
+Config A (Vector-only),31.25,60.94,86.98,0.521,22,31.25,11,0.007
+Config B (Graph-only),16.67,50.0,83.33,0.2857,32,100.0,0,0.0132
+Config C (Diagnostic GNN-only),16.67,50.0,83.33,0.2857,32,100.0,0,0.0247
+Config D (Graph + RAG),31.25,60.94,86.98,0.5179,22,93.75,1,0.033
+Config E (Full Hybrid),18.75,58.59,88.28,0.4313,26,87.5,2,0.1599

@@ -21,7 +21,7 @@
       "modules": [
         "HeteroThreatGNN"
       ],
-      "scoring": "GNN embedding affinity only; no NetworkX distance"
+      "scoring": "GNN cosine affinity + softmax"
     },
     "Config D": {
       "name": "Graph + RAG (Non-Neural)",

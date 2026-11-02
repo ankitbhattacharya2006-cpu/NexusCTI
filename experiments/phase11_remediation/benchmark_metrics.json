@@ -1,0 +1,104 @@
+{
+  "vector_only": {
+    "name": "Config A (Vector-only)",
+    "task_a": {
+      "top1_pct": 31.25,
+      "top3_pct": 60.94,
+      "top5_pct": 86.98,
+      "mrr": 0.521,
+      "hallucinations": 22,
+      "denominator": 32
+    },
+    "task_b": {
+      "abstention_pct": 31.25,
+      "abstentions": 5,
+      "false_attributions": 11,
+      "denominator": 16
+    },
+    "runtime_sec": 0.007
+  },
+  "graph_only": {
+    "name": "Config B (Graph-only)",
+    "task_a": {
+      "top1_pct": 16.67,
+      "top3_pct": 50.0,
+      "top5_pct": 83.33,
+      "mrr": 0.2857,
+      "hallucinations": 32,
+      "denominator": 32
+    },
+    "task_b": {
+      "abstention_pct": 100.0,
+      "abstentions": 16,
+      "false_attributions": 0,
+      "denominator": 16
+    },
+    "runtime_sec": 0.0132
+  },
+  "gnn_only": {
+    "name": "Config C (Diagnostic GNN-only)",
+    "task_a": {
+      "top1_pct": 16.67,
+      "top3_pct": 50.0,
+      "top5_pct": 83.33,
+      "mrr": 0.2857,
+      "hallucinations": 32,
+      "denominator": 32
+    },
+    "task_b": {
+      "abstention_pct": 100.0,
+      "abstentions": 16,
+      "false_attributions": 0,
+      "denominator": 16
+    },
+    "runtime_sec": 0.0247
+  },
+  "graph_plus_rag": {
+    "name": "Config D (Graph + RAG)",
+    "task_a": {
+      "top1_pct": 31.25,
+      "top3_pct": 60.94,
+      "top5_pct": 86.98,
+      "mrr": 0.5179,
+      "hallucinations": 22,
+      "denominator": 32
+    },
+    "task_b": {
+      "abstention_pct": 93.75,
+      "abstentions": 15,
+      "false_attributions": 1,
+      "denominator": 16
+    },
+    "runtime_sec": 0.033
+  },
+  "full_hybrid": {
+    "name": "Config E (Full Hybrid)",
+    "task_a": {
+      "top1_pct": 18.75,
+      "top3_pct": 58.59,
+      "top5_pct": 88.28,
+      "mrr": 0.4313,
+      "hallucinations": 26,
+      "denominator": 32
+    },
+    "task_b": {
+      "abstention_pct": 87.5,
+      "abstentions": 14,
+      "false_attributions": 2,
+      "denominator": 16
+    },
+    "runtime_sec": 0.1599
+  },
+  "statistical_test": {
+    "comparison": "Config E vs Config A (Task A Top-3)",
+    "n_pairs": 32,
+    "discordant_b_e_better": 6,
+    "discordant_c_a_better": 6,
+    "exact_mcnemar_p_value": 1.0,
+    "agresti_min_95ci": [
+      -0.2157,
+      0.2157
+    ],
+    "statistically_significant": false
+  }
+}

@@ -93,11 +93,11 @@ and hybrid scores are one stochastic run, not a reproducibility estimate.
 
 | Configuration | Top-1 Accuracy | Top-3 Accuracy | Top-5 Accuracy | Multi-Hop Attribution Accuracy ($\ge 2$ hops) | Hallucination Rate | MRR | Total Runtime | Avg Case Runtime |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Config A: Vector-only RAG** | 41.67% (5/12) | 83.33% (10/12) | 91.67% (11/12) | 45.45% (5/11) | 58.33% (7/12) | 0.6042 | 0.004s | 0.3 ms |
-| **Config B: Graph-only (Topological)** | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (11/11) | 0.00% (0/12) | **1.0000** | 0.015s | 1.3 ms |
-| **Config C: GNN-only (Neural)** | 8.33% (1/12) | 33.33% (4/12) | 83.33% (10/12) | 9.09% (1/11) | 91.67% (11/12) | 0.3208 | 0.002s | 0.2 ms |
-| **Config D: Graph + RAG (Non-Neural)** | 66.67% (8/12) | 91.67% (11/12) | **100.00%** (12/12) | 63.64% (7/11) | 33.33% (4/12) | 0.7847 | 0.019s | 1.6 ms |
-| **Config E: Full Hybrid (NexusCTI)** | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (11/11) | **0.00%** (0/12) | **1.0000** | 0.034s | 2.9 ms |
+| **Config A: Vector-only RAG** | 41.67% (5/12) | 83.33% (10/12) | 91.67% (11/12) | 45.45% (5/11) | 58.33% (7/12) | 0.6042 | 0.003s | 0.2 ms |
+| **Config B: Graph-only (Topological)** | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (11/11) | **0.00%** (0/12) | **1.0000** | 0.007s | 0.6 ms |
+| **Config C: GNN-only (Neural)** | 16.67% (2/12) | 41.67% (5/12) | 50.00% (6/12) | 9.09% (1/11) | 83.33% (10/12) | 0.3681 | 0.001s | 0.1 ms |
+| **Config D: Graph + RAG (Non-Neural)** | 66.67% (8/12) | 91.67% (11/12) | **100.00%** (12/12) | 63.64% (7/11) | 33.33% (4/12) | 0.7847 | 0.008s | 0.7 ms |
+| **Config E: Full Hybrid (NexusCTI)** | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (12/12) | **100.00%** (11/11) | **0.00%** (0/12) | **1.0000** | 0.012s | 1.0 ms |
 
 ### Metric reconciliation with the Phase 2 audit summary
 
@@ -124,9 +124,9 @@ explain the historical summary's 90.91% result.
    - On a closed, curated knowledge graph, every verified indicator has a finite path to its parent actor. Symbolic path traversal achieves perfect Top-1 accuracy.
    - **However:** Graph-only attribution produces **zero qualitative explanations**, cannot assess attacker intent, cannot verify campaign timelines, and provides no textual citations for human SOC defenders.
 
-3. **Corrected GNN-only Result (Config C: 8.33% in this run):**
+3. **Corrected GNN-only Result (Config C: 16.67% in this run):**
    - Neural-only actor affinity performed substantially below the graph-distance and hybrid predictors in this single unseeded run. This result is stochastic and should not be generalized from one run.
-   - The previous 58.33% Config C figure used a predictor that blended GNN affinity with NetworkX topology; it is not a valid neural-only comparison.
+   - The previous 58.33% / 75.00% Config C figures used predictors that blended GNN affinity with NetworkX topology; they are not valid neural-only comparisons.
 
 4. **Hybrid and Graph-only Comparison:**
    - Both Config B and Config E reached 100.0% Top-1 accuracy and 1.0000 MRR in this transductive run, so no ranking advantage from fusion is measurable on this benchmark.
@@ -155,4 +155,5 @@ All newly generated experiment artifacts are saved in:
 - `metrics_summary.csv`: Summary metrics comparison table.
 - `runtime_summary.json`: Detailed execution latencies per configuration.
 - `reproducibility_manifest.json`: Exact reproducibility environment metadata.
+- `historical_run_artifacts/`: Preserved pre-rerun historical artifacts directory.
 - `final_report.md`: This comprehensive technical audit report.

@@ -1,0 +1,241 @@
+config,case_id,task_type,anchor_ioc,ground_truth,predicted_top1,confidence,verdict,fractional_rank,top1_hit,top3_hit,top5_hit,is_tied,runtime_sec
+Config A (Vector-only),msrc_forest_blizzard_gooseegg,Task A (Closed-Set),d7e82b44c1a590214e214f526317b9b1e5c26b38947f61c3a8813735e0766289,actor_apt28,actor_apt29,0.4659,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00016
+Config A (Vector-only),cisa_aa20_225a_drovorub,Task A (Closed-Set),89.248.165.74,actor_apt28,actor_apt29,0.6585,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00011
+Config A (Vector-only),cisa_aa23_347a_apt28_roundcube,Task A (Closed-Set),185.141.63.120,actor_apt28,actor_apt29,0.4612,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00027
+Config A (Vector-only),ncsc_apt28_cisco_snmp,Task A (Closed-Set),194.26.29.111,actor_apt28,actor_volt_typhoon,0.4363,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00018
+Config A (Vector-only),welivesecurity_apt28_lojax,Task A (Closed-Set),185.180.199.18,actor_apt28,actor_volt_typhoon,0.3554,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.0001
+Config A (Vector-only),cisa_aa23_347a_teamcity,Task A (Closed-Set),149.28.216.55,actor_apt29,actor_sandworm,0.3954,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00014
+Config A (Vector-only),msrc_midnight_blizzard_oauth,Task A (Closed-Set),51.103.211.90,actor_apt29,actor_apt29,0.6024,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.0001
+Config A (Vector-only),cisa_aa20_205a_wellmess,Task A (Closed-Set),194.38.20.44,actor_apt29,actor_apt29,0.3823,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,9e-05
+Config A (Vector-only),msrc_nobelium_envyscout,Task A (Closed-Set),192.99.221.77,actor_apt29,actor_sandworm,0.806,INCONCLUSIVE,4.5,0.0,0.25,0.75,True,9e-05
+Config A (Vector-only),cisa_aa24_057a_svr_cloud,Task A (Closed-Set),198.54.133.15,actor_apt29,actor_sandworm,0.3819,INCONCLUSIVE,4.0,0.0,0.0,1.0,False,9e-05
+Config A (Vector-only),cisa_aa22_054a_cyclops_blink,Task A (Closed-Set),194.135.24.89,actor_sandworm,actor_apt29,0.3982,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,9e-05
+Config A (Vector-only),ncsc_cisa_infamous_chisel,Task A (Closed-Set),194.26.29.99,actor_sandworm,actor_apt29,0.4834,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,9e-05
+Config A (Vector-only),cisa_hermeticwiper_sandworm,Task A (Closed-Set),103.151.125.10,actor_sandworm,actor_apt29,0.6002,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,9e-05
+Config A (Vector-only),cisa_industroyer2_substations,Task A (Closed-Set),195.123.246.42,actor_sandworm,actor_apt29,0.4303,INCONCLUSIVE,4.0,0.0,0.0,1.0,False,8e-05
+Config A (Vector-only),sentinelone_acidrain_wiper,Task A (Closed-Set),185.176.27.12,actor_sandworm,actor_sandworm,0.441,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,9e-05
+Config A (Vector-only),cisa_aa22_108a_tradertraitor,Task A (Closed-Set),175.45.178.22,actor_lazarus,actor_apt29,0.4083,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,9e-05
+Config A (Vector-only),cisa_aa20_239a_fastcash,Task A (Closed-Set),210.126.111.95,actor_lazarus,actor_apt29,0.669,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00023
+Config A (Vector-only),fbi_lazarus_ronin_bridge,Task A (Closed-Set),141.98.11.89,actor_lazarus,actor_volt_typhoon,0.3942,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.0001
+Config A (Vector-only),fbi_lazarus_horizon_bridge,Task A (Closed-Set),104.244.76.105,actor_lazarus,actor_sandworm,0.619,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,9e-05
+Config A (Vector-only),cisa_lazarus_dtrack,Task A (Closed-Set),118.25.6.39,actor_lazarus,actor_apt29,0.3995,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,9e-05
+Config A (Vector-only),talos_lazarus_magicrat,Task A (Closed-Set),185.234.218.66,actor_lazarus,actor_apt28,0.844,INCONCLUSIVE,4.5,0.0,0.25,0.75,True,9e-05
+Config A (Vector-only),mandiant_fin7_powerplant,Task A (Closed-Set),194.67.210.155,actor_fin7,actor_apt29,0.4119,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00025
+Config A (Vector-only),msrc_sangria_tempest_domino,Task A (Closed-Set),193.142.146.88,actor_fin7,actor_fin7,0.421,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00015
+Config A (Vector-only),mandiant_fin7_jssloader,Task A (Closed-Set),185.106.94.22,actor_fin7,actor_volt_typhoon,0.5959,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.0001
+Config A (Vector-only),fbi_flash_fin7_badusb,Task A (Closed-Set),142.11.206.18,actor_fin7,actor_fin7,0.6519,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.0001
+Config A (Vector-only),cisa_carbanak_telnet_banking,Task A (Closed-Set),93.189.44.188,actor_fin7,actor_apt29,0.4403,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.0001
+Config A (Vector-only),cisa_aa24_038a_volt_typhoon,Task A (Closed-Set),203.0.113.195,actor_volt_typhoon,actor_volt_typhoon,0.8413,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.0001
+Config A (Vector-only),msrc_volt_typhoon_lotl,Task A (Closed-Set),198.51.100.122,actor_volt_typhoon,actor_volt_typhoon,0.6312,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.0001
+Config A (Vector-only),cisa_volt_typhoon_fortinet_vpn,Task A (Closed-Set),104.223.118.88,actor_volt_typhoon,actor_volt_typhoon,0.4354,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.0001
+Config A (Vector-only),fbi_volt_typhoon_kvbotnet,Task A (Closed-Set),45.154.255.71,actor_volt_typhoon,actor_volt_typhoon,0.7795,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.0001
+Config A (Vector-only),cisa_volt_typhoon_water_energy,Task A (Closed-Set),207.180.200.19,actor_volt_typhoon,actor_volt_typhoon,0.5057,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,9e-05
+Config A (Vector-only),cisa_volt_typhoon_maritime,Task A (Closed-Set),199.19.224.40,actor_volt_typhoon,actor_apt29,0.6584,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,9e-05
+Config A (Vector-only),cisa_aa20_301a_kimsuky,Task B (Open-Set),136.243.90.11,actor_kimsuky,actor_lazarus,0.4125,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0001
+Config A (Vector-only),cisa_kimsuky_appleseed_2023,Task B (Open-Set),152.89.247.78,actor_kimsuky,actor_sandworm,0.6619,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,9e-05
+Config A (Vector-only),cisa_aa23_325a_lockbit,Task B (Open-Set),185.161.248.60,actor_lockbit,actor_volt_typhoon,0.636,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0001
+Config A (Vector-only),cisa_lockbit_green_crypter,Task B (Open-Set),91.215.85.147,actor_lockbit,actor_apt29,0.3852,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,9e-05
+Config A (Vector-only),cisa_aa20_258a_apt41,Task B (Open-Set),103.224.182.245,actor_apt41,actor_fin7,0.3858,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,8e-05
+Config A (Vector-only),mandiant_apt41_keyplug_us_gov,Task B (Open-Set),108.62.118.17,actor_apt41,actor_volt_typhoon,0.8062,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,8e-05
+Config A (Vector-only),cisa_aa22_320a_charming_kitten,Task B (Open-Set),144.202.8.24,actor_charming_kitten,actor_apt29,0.4238,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,8e-05
+Config A (Vector-only),microsoft_mint_sandstorm_hyperscrap,Task B (Open-Set),185.162.235.120,actor_charming_kitten,actor_sandworm,0.3942,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,9e-05
+Config A (Vector-only),cisa_aa23_010a_gamaredon,Task B (Open-Set),194.180.174.15,actor_gamaredon,actor_sandworm,0.6162,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,8e-05
+Config A (Vector-only),cert_ua_gamaredon_gammaload,Task B (Open-Set),195.123.218.89,actor_gamaredon,actor_apt29,0.5172,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00019
+Config A (Vector-only),cisa_aa23_353a_blackcat,Task B (Open-Set),172.67.162.204,actor_blackcat,actor_volt_typhoon,0.3939,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,8e-05
+Config A (Vector-only),fbi_flash_blackcat_sphynx,Task B (Open-Set),194.38.20.199,actor_blackcat,actor_volt_typhoon,0.7763,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,7e-05
+Config A (Vector-only),cisa_aa23_320a_scattered_spider,Task B (Open-Set),146.70.165.22,actor_scattered_spider,actor_apt29,0.7892,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,7e-05
+Config A (Vector-only),cisa_aa23_158a_clop_moveit,Task B (Open-Set),148.251.18.231,actor_clop,actor_sandworm,0.5584,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,8e-05
+Config A (Vector-only),cisa_aa23_020a_manageengine,Task B (Open-Set),198.51.100.201,AMBIGUOUS_MULTI_ACTOR,actor_fin7,0.3961,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,9e-05
+Config A (Vector-only),cisa_log4j_commodity_scanning,Task B (Open-Set),45.155.205.233,AMBIGUOUS_MULTI_ACTOR,actor_sandworm,0.5891,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,8e-05
+Config B (Graph-only),msrc_forest_blizzard_gooseegg,Task A (Closed-Set),d7e82b44c1a590214e214f526317b9b1e5c26b38947f61c3a8813735e0766289,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,4e-05
+Config B (Graph-only),cisa_aa20_225a_drovorub,Task A (Closed-Set),89.248.165.74,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,3e-05
+Config B (Graph-only),cisa_aa23_347a_apt28_roundcube,Task A (Closed-Set),185.141.63.120,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,3e-05
+Config B (Graph-only),ncsc_apt28_cisco_snmp,Task A (Closed-Set),194.26.29.111,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),welivesecurity_apt28_lojax,Task A (Closed-Set),185.180.199.18,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_aa23_347a_teamcity,Task A (Closed-Set),149.28.216.55,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),msrc_midnight_blizzard_oauth,Task A (Closed-Set),51.103.211.90,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_aa20_205a_wellmess,Task A (Closed-Set),194.38.20.44,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),msrc_nobelium_envyscout,Task A (Closed-Set),192.99.221.77,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_aa24_057a_svr_cloud,Task A (Closed-Set),198.54.133.15,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,0.00045
+Config B (Graph-only),cisa_aa22_054a_cyclops_blink,Task A (Closed-Set),194.135.24.89,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),ncsc_cisa_infamous_chisel,Task A (Closed-Set),194.26.29.99,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,3e-05
+Config B (Graph-only),cisa_hermeticwiper_sandworm,Task A (Closed-Set),103.151.125.10,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_industroyer2_substations,Task A (Closed-Set),195.123.246.42,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),sentinelone_acidrain_wiper,Task A (Closed-Set),185.176.27.12,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_aa22_108a_tradertraitor,Task A (Closed-Set),175.45.178.22,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_aa20_239a_fastcash,Task A (Closed-Set),210.126.111.95,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),fbi_lazarus_ronin_bridge,Task A (Closed-Set),141.98.11.89,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),fbi_lazarus_horizon_bridge,Task A (Closed-Set),104.244.76.105,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_lazarus_dtrack,Task A (Closed-Set),118.25.6.39,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),talos_lazarus_magicrat,Task A (Closed-Set),185.234.218.66,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),mandiant_fin7_powerplant,Task A (Closed-Set),194.67.210.155,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),msrc_sangria_tempest_domino,Task A (Closed-Set),193.142.146.88,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),mandiant_fin7_jssloader,Task A (Closed-Set),185.106.94.22,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),fbi_flash_fin7_badusb,Task A (Closed-Set),142.11.206.18,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_carbanak_telnet_banking,Task A (Closed-Set),93.189.44.188,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_aa24_038a_volt_typhoon,Task A (Closed-Set),203.0.113.195,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),msrc_volt_typhoon_lotl,Task A (Closed-Set),198.51.100.122,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),cisa_volt_typhoon_fortinet_vpn,Task A (Closed-Set),104.223.118.88,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config B (Graph-only),fbi_volt_typhoon_kvbotnet,Task A (Closed-Set),45.154.255.71,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,0.0001
+Config B (Graph-only),cisa_volt_typhoon_water_energy,Task A (Closed-Set),207.180.200.19,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,6e-05
+Config B (Graph-only),cisa_volt_typhoon_maritime,Task A (Closed-Set),199.19.224.40,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,6e-05
+Config B (Graph-only),cisa_aa20_301a_kimsuky,Task B (Open-Set),136.243.90.11,actor_kimsuky,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,5e-05
+Config B (Graph-only),cisa_kimsuky_appleseed_2023,Task B (Open-Set),152.89.247.78,actor_kimsuky,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config B (Graph-only),cisa_aa23_325a_lockbit,Task B (Open-Set),185.161.248.60,actor_lockbit,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00029
+Config B (Graph-only),cisa_lockbit_green_crypter,Task B (Open-Set),91.215.85.147,actor_lockbit,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,7e-05
+Config B (Graph-only),cisa_aa20_258a_apt41,Task B (Open-Set),103.224.182.245,actor_apt41,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00016
+Config B (Graph-only),mandiant_apt41_keyplug_us_gov,Task B (Open-Set),108.62.118.17,actor_apt41,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config B (Graph-only),cisa_aa22_320a_charming_kitten,Task B (Open-Set),144.202.8.24,actor_charming_kitten,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,7e-05
+Config B (Graph-only),microsoft_mint_sandstorm_hyperscrap,Task B (Open-Set),185.162.235.120,actor_charming_kitten,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00022
+Config B (Graph-only),cisa_aa23_010a_gamaredon,Task B (Open-Set),194.180.174.15,actor_gamaredon,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config B (Graph-only),cert_ua_gamaredon_gammaload,Task B (Open-Set),195.123.218.89,actor_gamaredon,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config B (Graph-only),cisa_aa23_353a_blackcat,Task B (Open-Set),172.67.162.204,actor_blackcat,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config B (Graph-only),fbi_flash_blackcat_sphynx,Task B (Open-Set),194.38.20.199,actor_blackcat,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,9e-05
+Config B (Graph-only),cisa_aa23_320a_scattered_spider,Task B (Open-Set),146.70.165.22,actor_scattered_spider,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0001
+Config B (Graph-only),cisa_aa23_158a_clop_moveit,Task B (Open-Set),148.251.18.231,actor_clop,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config B (Graph-only),cisa_aa23_020a_manageengine,Task B (Open-Set),198.51.100.201,AMBIGUOUS_MULTI_ACTOR,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config B (Graph-only),cisa_log4j_commodity_scanning,Task B (Open-Set),45.155.205.233,AMBIGUOUS_MULTI_ACTOR,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00609
+Config C (Diagnostic GNN-only),msrc_forest_blizzard_gooseegg,Task A (Closed-Set),d7e82b44c1a590214e214f526317b9b1e5c26b38947f61c3a8813735e0766289,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,3e-05
+Config C (Diagnostic GNN-only),cisa_aa20_225a_drovorub,Task A (Closed-Set),89.248.165.74,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,3e-05
+Config C (Diagnostic GNN-only),cisa_aa23_347a_apt28_roundcube,Task A (Closed-Set),185.141.63.120,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),ncsc_apt28_cisco_snmp,Task A (Closed-Set),194.26.29.111,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),welivesecurity_apt28_lojax,Task A (Closed-Set),185.180.199.18,actor_apt28,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_aa23_347a_teamcity,Task A (Closed-Set),149.28.216.55,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),msrc_midnight_blizzard_oauth,Task A (Closed-Set),51.103.211.90,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_aa20_205a_wellmess,Task A (Closed-Set),194.38.20.44,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),msrc_nobelium_envyscout,Task A (Closed-Set),192.99.221.77,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_aa24_057a_svr_cloud,Task A (Closed-Set),198.54.133.15,actor_apt29,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_aa22_054a_cyclops_blink,Task A (Closed-Set),194.135.24.89,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),ncsc_cisa_infamous_chisel,Task A (Closed-Set),194.26.29.99,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_hermeticwiper_sandworm,Task A (Closed-Set),103.151.125.10,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_industroyer2_substations,Task A (Closed-Set),195.123.246.42,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),sentinelone_acidrain_wiper,Task A (Closed-Set),185.176.27.12,actor_sandworm,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_aa22_108a_tradertraitor,Task A (Closed-Set),175.45.178.22,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_aa20_239a_fastcash,Task A (Closed-Set),210.126.111.95,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),fbi_lazarus_ronin_bridge,Task A (Closed-Set),141.98.11.89,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),fbi_lazarus_horizon_bridge,Task A (Closed-Set),104.244.76.105,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_lazarus_dtrack,Task A (Closed-Set),118.25.6.39,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),talos_lazarus_magicrat,Task A (Closed-Set),185.234.218.66,actor_lazarus,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),mandiant_fin7_powerplant,Task A (Closed-Set),194.67.210.155,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),msrc_sangria_tempest_domino,Task A (Closed-Set),193.142.146.88,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),mandiant_fin7_jssloader,Task A (Closed-Set),185.106.94.22,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),fbi_flash_fin7_badusb,Task A (Closed-Set),142.11.206.18,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_carbanak_telnet_banking,Task A (Closed-Set),93.189.44.188,actor_fin7,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_aa24_038a_volt_typhoon,Task A (Closed-Set),203.0.113.195,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),msrc_volt_typhoon_lotl,Task A (Closed-Set),198.51.100.122,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_volt_typhoon_fortinet_vpn,Task A (Closed-Set),104.223.118.88,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),fbi_volt_typhoon_kvbotnet,Task A (Closed-Set),45.154.255.71,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_volt_typhoon_water_energy,Task A (Closed-Set),207.180.200.19,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,2e-05
+Config C (Diagnostic GNN-only),cisa_volt_typhoon_maritime,Task A (Closed-Set),199.19.224.40,actor_volt_typhoon,NONE,0.0,INCONCLUSIVE,3.5,0.1667,0.5,0.8333,True,8e-05
+Config C (Diagnostic GNN-only),cisa_aa20_301a_kimsuky,Task B (Open-Set),136.243.90.11,actor_kimsuky,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0001
+Config C (Diagnostic GNN-only),cisa_kimsuky_appleseed_2023,Task B (Open-Set),152.89.247.78,actor_kimsuky,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config C (Diagnostic GNN-only),cisa_aa23_325a_lockbit,Task B (Open-Set),185.161.248.60,actor_lockbit,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,6e-05
+Config C (Diagnostic GNN-only),cisa_lockbit_green_crypter,Task B (Open-Set),91.215.85.147,actor_lockbit,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,4e-05
+Config C (Diagnostic GNN-only),cisa_aa20_258a_apt41,Task B (Open-Set),103.224.182.245,actor_apt41,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00084
+Config C (Diagnostic GNN-only),mandiant_apt41_keyplug_us_gov,Task B (Open-Set),108.62.118.17,actor_apt41,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,3e-05
+Config C (Diagnostic GNN-only),cisa_aa22_320a_charming_kitten,Task B (Open-Set),144.202.8.24,actor_charming_kitten,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),microsoft_mint_sandstorm_hyperscrap,Task B (Open-Set),185.162.235.120,actor_charming_kitten,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),cisa_aa23_010a_gamaredon,Task B (Open-Set),194.180.174.15,actor_gamaredon,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),cert_ua_gamaredon_gammaload,Task B (Open-Set),195.123.218.89,actor_gamaredon,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),cisa_aa23_353a_blackcat,Task B (Open-Set),172.67.162.204,actor_blackcat,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),fbi_flash_blackcat_sphynx,Task B (Open-Set),194.38.20.199,actor_blackcat,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),cisa_aa23_320a_scattered_spider,Task B (Open-Set),146.70.165.22,actor_scattered_spider,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),cisa_aa23_158a_clop_moveit,Task B (Open-Set),148.251.18.231,actor_clop,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,3e-05
+Config C (Diagnostic GNN-only),cisa_aa23_020a_manageengine,Task B (Open-Set),198.51.100.201,AMBIGUOUS_MULTI_ACTOR,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config C (Diagnostic GNN-only),cisa_log4j_commodity_scanning,Task B (Open-Set),45.155.205.233,AMBIGUOUS_MULTI_ACTOR,NONE,0.0,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,2e-05
+Config D (Graph + RAG),msrc_forest_blizzard_gooseegg,Task A (Closed-Set),d7e82b44c1a590214e214f526317b9b1e5c26b38947f61c3a8813735e0766289,actor_apt28,actor_apt29,0.2329,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.01032
+Config D (Graph + RAG),cisa_aa20_225a_drovorub,Task A (Closed-Set),89.248.165.74,actor_apt28,actor_apt29,0.3292,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00148
+Config D (Graph + RAG),cisa_aa23_347a_apt28_roundcube,Task A (Closed-Set),185.141.63.120,actor_apt28,actor_apt29,0.2306,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00049
+Config D (Graph + RAG),ncsc_apt28_cisco_snmp,Task A (Closed-Set),194.26.29.111,actor_apt28,actor_volt_typhoon,0.2182,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00035
+Config D (Graph + RAG),welivesecurity_apt28_lojax,Task A (Closed-Set),185.180.199.18,actor_apt28,actor_volt_typhoon,0.1777,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00035
+Config D (Graph + RAG),cisa_aa23_347a_teamcity,Task A (Closed-Set),149.28.216.55,actor_apt29,actor_sandworm,0.1977,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00037
+Config D (Graph + RAG),msrc_midnight_blizzard_oauth,Task A (Closed-Set),51.103.211.90,actor_apt29,actor_apt29,0.3012,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00035
+Config D (Graph + RAG),cisa_aa20_205a_wellmess,Task A (Closed-Set),194.38.20.44,actor_apt29,actor_apt29,0.1911,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00044
+Config D (Graph + RAG),msrc_nobelium_envyscout,Task A (Closed-Set),192.99.221.77,actor_apt29,actor_sandworm,0.403,INCONCLUSIVE,4.5,0.0,0.25,0.75,True,0.00028
+Config D (Graph + RAG),cisa_aa24_057a_svr_cloud,Task A (Closed-Set),198.54.133.15,actor_apt29,actor_sandworm,0.191,INCONCLUSIVE,4.0,0.0,0.0,1.0,False,0.00031
+Config D (Graph + RAG),cisa_aa22_054a_cyclops_blink,Task A (Closed-Set),194.135.24.89,actor_sandworm,actor_apt29,0.1991,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00074
+Config D (Graph + RAG),ncsc_cisa_infamous_chisel,Task A (Closed-Set),194.26.29.99,actor_sandworm,actor_apt29,0.2417,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00014
+Config D (Graph + RAG),cisa_hermeticwiper_sandworm,Task A (Closed-Set),103.151.125.10,actor_sandworm,actor_apt29,0.3001,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00015
+Config D (Graph + RAG),cisa_industroyer2_substations,Task A (Closed-Set),195.123.246.42,actor_sandworm,actor_apt29,0.2152,INCONCLUSIVE,4.0,0.0,0.0,1.0,False,0.00013
+Config D (Graph + RAG),sentinelone_acidrain_wiper,Task A (Closed-Set),185.176.27.12,actor_sandworm,actor_sandworm,0.2205,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00013
+Config D (Graph + RAG),cisa_aa22_108a_tradertraitor,Task A (Closed-Set),175.45.178.22,actor_lazarus,actor_apt29,0.2041,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00012
+Config D (Graph + RAG),cisa_aa20_239a_fastcash,Task A (Closed-Set),210.126.111.95,actor_lazarus,actor_apt29,0.3345,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00012
+Config D (Graph + RAG),fbi_lazarus_ronin_bridge,Task A (Closed-Set),141.98.11.89,actor_lazarus,actor_volt_typhoon,0.1971,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00034
+Config D (Graph + RAG),fbi_lazarus_horizon_bridge,Task A (Closed-Set),104.244.76.105,actor_lazarus,actor_sandworm,0.3095,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00013
+Config D (Graph + RAG),cisa_lazarus_dtrack,Task A (Closed-Set),118.25.6.39,actor_lazarus,actor_apt29,0.1998,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00012
+Config D (Graph + RAG),talos_lazarus_magicrat,Task A (Closed-Set),185.234.218.66,actor_lazarus,actor_apt28,0.422,INCONCLUSIVE,4.5,0.0,0.25,0.75,True,0.00012
+Config D (Graph + RAG),mandiant_fin7_powerplant,Task A (Closed-Set),194.67.210.155,actor_fin7,actor_apt29,0.2059,INCONCLUSIVE,2.5,0.0,1.0,1.0,True,0.00012
+Config D (Graph + RAG),msrc_sangria_tempest_domino,Task A (Closed-Set),193.142.146.88,actor_fin7,actor_fin7,0.2105,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00012
+Config D (Graph + RAG),mandiant_fin7_jssloader,Task A (Closed-Set),185.106.94.22,actor_fin7,actor_volt_typhoon,0.2979,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00423
+Config D (Graph + RAG),fbi_flash_fin7_badusb,Task A (Closed-Set),142.11.206.18,actor_fin7,actor_fin7,0.326,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00016
+Config D (Graph + RAG),cisa_carbanak_telnet_banking,Task A (Closed-Set),93.189.44.188,actor_fin7,actor_apt29,0.2202,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00012
+Config D (Graph + RAG),cisa_aa24_038a_volt_typhoon,Task A (Closed-Set),203.0.113.195,actor_volt_typhoon,actor_volt_typhoon,0.4207,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00014
+Config D (Graph + RAG),msrc_volt_typhoon_lotl,Task A (Closed-Set),198.51.100.122,actor_volt_typhoon,actor_volt_typhoon,0.3156,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00031
+Config D (Graph + RAG),cisa_volt_typhoon_fortinet_vpn,Task A (Closed-Set),104.223.118.88,actor_volt_typhoon,actor_volt_typhoon,0.2177,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00139
+Config D (Graph + RAG),fbi_volt_typhoon_kvbotnet,Task A (Closed-Set),45.154.255.71,actor_volt_typhoon,actor_volt_typhoon,0.3897,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00014
+Config D (Graph + RAG),cisa_volt_typhoon_water_energy,Task A (Closed-Set),207.180.200.19,actor_volt_typhoon,actor_volt_typhoon,0.2529,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00012
+Config D (Graph + RAG),cisa_volt_typhoon_maritime,Task A (Closed-Set),199.19.224.40,actor_volt_typhoon,actor_apt29,0.3292,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00011
+Config D (Graph + RAG),cisa_aa20_301a_kimsuky,Task B (Open-Set),136.243.90.11,actor_kimsuky,actor_lazarus,0.2062,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00012
+Config D (Graph + RAG),cisa_kimsuky_appleseed_2023,Task B (Open-Set),152.89.247.78,actor_kimsuky,actor_sandworm,0.331,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00011
+Config D (Graph + RAG),cisa_aa23_325a_lockbit,Task B (Open-Set),185.161.248.60,actor_lockbit,actor_volt_typhoon,0.318,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00012
+Config D (Graph + RAG),cisa_lockbit_green_crypter,Task B (Open-Set),91.215.85.147,actor_lockbit,actor_apt29,0.1926,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00011
+Config D (Graph + RAG),cisa_aa20_258a_apt41,Task B (Open-Set),103.224.182.245,actor_apt41,actor_fin7,0.1929,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00096
+Config D (Graph + RAG),mandiant_apt41_keyplug_us_gov,Task B (Open-Set),108.62.118.17,actor_apt41,actor_volt_typhoon,0.4031,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00037
+Config D (Graph + RAG),cisa_aa22_320a_charming_kitten,Task B (Open-Set),144.202.8.24,actor_charming_kitten,actor_apt29,0.2119,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0003
+Config D (Graph + RAG),microsoft_mint_sandstorm_hyperscrap,Task B (Open-Set),185.162.235.120,actor_charming_kitten,actor_sandworm,0.1971,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00039
+Config D (Graph + RAG),cisa_aa23_010a_gamaredon,Task B (Open-Set),194.180.174.15,actor_gamaredon,actor_sandworm,0.3081,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00028
+Config D (Graph + RAG),cert_ua_gamaredon_gammaload,Task B (Open-Set),195.123.218.89,actor_gamaredon,actor_apt29,0.2586,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00027
+Config D (Graph + RAG),cisa_aa23_353a_blackcat,Task B (Open-Set),172.67.162.204,actor_blackcat,actor_volt_typhoon,0.1969,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0003
+Config D (Graph + RAG),fbi_flash_blackcat_sphynx,Task B (Open-Set),194.38.20.199,actor_blackcat,actor_volt_typhoon,0.3881,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00028
+Config D (Graph + RAG),cisa_aa23_320a_scattered_spider,Task B (Open-Set),146.70.165.22,actor_scattered_spider,actor_apt29,0.3946,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00046
+Config D (Graph + RAG),cisa_aa23_158a_clop_moveit,Task B (Open-Set),148.251.18.231,actor_clop,actor_sandworm,0.2792,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00036
+Config D (Graph + RAG),cisa_aa23_020a_manageengine,Task B (Open-Set),198.51.100.201,AMBIGUOUS_MULTI_ACTOR,actor_fin7,0.1981,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00014
+Config D (Graph + RAG),cisa_log4j_commodity_scanning,Task B (Open-Set),45.155.205.233,AMBIGUOUS_MULTI_ACTOR,actor_sandworm,0.2945,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00012
+Config E (Full Hybrid),msrc_forest_blizzard_gooseegg,Task A (Closed-Set),d7e82b44c1a590214e214f526317b9b1e5c26b38947f61c3a8813735e0766289,actor_apt28,actor_apt29,0.3927,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00442
+Config E (Full Hybrid),cisa_aa20_225a_drovorub,Task A (Closed-Set),89.248.165.74,actor_apt28,actor_volt_typhoon,0.3291,INCONCLUSIVE,5.0,0.0,0.0,1.0,False,0.00375
+Config E (Full Hybrid),cisa_aa23_347a_apt28_roundcube,Task A (Closed-Set),185.141.63.120,actor_apt28,actor_lazarus,0.35,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00401
+Config E (Full Hybrid),ncsc_apt28_cisco_snmp,Task A (Closed-Set),194.26.29.111,actor_apt28,actor_volt_typhoon,0.3316,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00307
+Config E (Full Hybrid),welivesecurity_apt28_lojax,Task A (Closed-Set),185.180.199.18,actor_apt28,actor_apt29,0.4473,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00331
+Config E (Full Hybrid),cisa_aa23_347a_teamcity,Task A (Closed-Set),149.28.216.55,actor_apt29,actor_volt_typhoon,0.3462,INCONCLUSIVE,4.0,0.0,0.0,1.0,False,0.0033
+Config E (Full Hybrid),msrc_midnight_blizzard_oauth,Task A (Closed-Set),51.103.211.90,actor_apt29,actor_apt29,0.3414,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00304
+Config E (Full Hybrid),cisa_aa20_205a_wellmess,Task A (Closed-Set),194.38.20.44,actor_apt29,actor_volt_typhoon,0.447,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00335
+Config E (Full Hybrid),msrc_nobelium_envyscout,Task A (Closed-Set),192.99.221.77,actor_apt29,actor_apt28,0.3213,INCONCLUSIVE,3.5,0.0,0.5,1.0,True,0.00296
+Config E (Full Hybrid),cisa_aa24_057a_svr_cloud,Task A (Closed-Set),198.54.133.15,actor_apt29,actor_volt_typhoon,0.3373,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00303
+Config E (Full Hybrid),cisa_aa22_054a_cyclops_blink,Task A (Closed-Set),194.135.24.89,actor_sandworm,actor_apt28,0.3308,INCONCLUSIVE,4.0,0.0,0.0,1.0,False,0.00322
+Config E (Full Hybrid),ncsc_cisa_infamous_chisel,Task A (Closed-Set),194.26.29.99,actor_sandworm,actor_apt29,0.3905,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00344
+Config E (Full Hybrid),cisa_hermeticwiper_sandworm,Task A (Closed-Set),103.151.125.10,actor_sandworm,actor_apt29,0.4515,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00323
+Config E (Full Hybrid),cisa_industroyer2_substations,Task A (Closed-Set),195.123.246.42,actor_sandworm,actor_sandworm,0.3328,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00328
+Config E (Full Hybrid),sentinelone_acidrain_wiper,Task A (Closed-Set),185.176.27.12,actor_sandworm,actor_apt29,0.3389,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00356
+Config E (Full Hybrid),cisa_aa22_108a_tradertraitor,Task A (Closed-Set),175.45.178.22,actor_lazarus,actor_lazarus,0.3351,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00299
+Config E (Full Hybrid),cisa_aa20_239a_fastcash,Task A (Closed-Set),210.126.111.95,actor_lazarus,actor_apt29,0.3336,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00452
+Config E (Full Hybrid),fbi_lazarus_ronin_bridge,Task A (Closed-Set),141.98.11.89,actor_lazarus,actor_volt_typhoon,0.393,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00354
+Config E (Full Hybrid),fbi_lazarus_horizon_bridge,Task A (Closed-Set),104.244.76.105,actor_lazarus,actor_volt_typhoon,0.335,INCONCLUSIVE,4.0,0.0,0.0,1.0,False,0.00327
+Config E (Full Hybrid),cisa_lazarus_dtrack,Task A (Closed-Set),118.25.6.39,actor_lazarus,actor_apt29,0.3903,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00322
+Config E (Full Hybrid),talos_lazarus_magicrat,Task A (Closed-Set),185.234.218.66,actor_lazarus,actor_lazarus,0.3016,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00319
+Config E (Full Hybrid),mandiant_fin7_powerplant,Task A (Closed-Set),194.67.210.155,actor_fin7,actor_apt29,0.4038,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00342
+Config E (Full Hybrid),msrc_sangria_tempest_domino,Task A (Closed-Set),193.142.146.88,actor_fin7,actor_sandworm,0.4286,INCONCLUSIVE,4.5,0.0,0.25,0.75,True,0.00318
+Config E (Full Hybrid),mandiant_fin7_jssloader,Task A (Closed-Set),185.106.94.22,actor_fin7,actor_volt_typhoon,0.3361,INCONCLUSIVE,5.0,0.0,0.0,0.6667,True,0.00319
+Config E (Full Hybrid),fbi_flash_fin7_badusb,Task A (Closed-Set),142.11.206.18,actor_fin7,actor_sandworm,0.4135,INCONCLUSIVE,5.5,0.0,0.0,0.5,True,0.00324
+Config E (Full Hybrid),cisa_carbanak_telnet_banking,Task A (Closed-Set),93.189.44.188,actor_fin7,actor_fin7,0.3379,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00316
+Config E (Full Hybrid),cisa_aa24_038a_volt_typhoon,Task A (Closed-Set),203.0.113.195,actor_volt_typhoon,actor_apt29,0.3397,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.00337
+Config E (Full Hybrid),msrc_volt_typhoon_lotl,Task A (Closed-Set),198.51.100.122,actor_volt_typhoon,actor_apt29,0.3384,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00325
+Config E (Full Hybrid),cisa_volt_typhoon_fortinet_vpn,Task A (Closed-Set),104.223.118.88,actor_volt_typhoon,actor_lazarus,0.3157,INCONCLUSIVE,2.0,0.0,1.0,1.0,False,0.0031
+Config E (Full Hybrid),fbi_volt_typhoon_kvbotnet,Task A (Closed-Set),45.154.255.71,actor_volt_typhoon,actor_volt_typhoon,0.3958,INCONCLUSIVE,1.0,1.0,1.0,1.0,False,0.00314
+Config E (Full Hybrid),cisa_volt_typhoon_water_energy,Task A (Closed-Set),207.180.200.19,actor_volt_typhoon,actor_apt29,0.3847,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00309
+Config E (Full Hybrid),cisa_volt_typhoon_maritime,Task A (Closed-Set),199.19.224.40,actor_volt_typhoon,actor_apt29,0.3887,INCONCLUSIVE,3.0,0.0,1.0,1.0,False,0.00309
+Config E (Full Hybrid),cisa_aa20_301a_kimsuky,Task B (Open-Set),136.243.90.11,actor_kimsuky,actor_apt28,0.3966,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00333
+Config E (Full Hybrid),cisa_kimsuky_appleseed_2023,Task B (Open-Set),152.89.247.78,actor_kimsuky,actor_lazarus,0.3325,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00307
+Config E (Full Hybrid),cisa_aa23_325a_lockbit,Task B (Open-Set),185.161.248.60,actor_lockbit,actor_volt_typhoon,0.347,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00313
+Config E (Full Hybrid),cisa_lockbit_green_crypter,Task B (Open-Set),91.215.85.147,actor_lockbit,actor_fin7,0.3777,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0031
+Config E (Full Hybrid),cisa_aa20_258a_apt41,Task B (Open-Set),103.224.182.245,actor_apt41,actor_sandworm,0.3418,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00305
+Config E (Full Hybrid),mandiant_apt41_keyplug_us_gov,Task B (Open-Set),108.62.118.17,actor_apt41,actor_apt28,0.3348,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00347
+Config E (Full Hybrid),cisa_aa22_320a_charming_kitten,Task B (Open-Set),144.202.8.24,actor_charming_kitten,actor_apt29,0.4188,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00312
+Config E (Full Hybrid),microsoft_mint_sandstorm_hyperscrap,Task B (Open-Set),185.162.235.120,actor_charming_kitten,actor_sandworm,0.3899,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.0031
+Config E (Full Hybrid),cisa_aa23_010a_gamaredon,Task B (Open-Set),194.180.174.15,actor_gamaredon,actor_sandworm,0.349,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00311
+Config E (Full Hybrid),cert_ua_gamaredon_gammaload,Task B (Open-Set),195.123.218.89,actor_gamaredon,actor_volt_typhoon,0.3353,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00307
+Config E (Full Hybrid),cisa_aa23_353a_blackcat,Task B (Open-Set),172.67.162.204,actor_blackcat,actor_volt_typhoon,0.3994,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00332
+Config E (Full Hybrid),fbi_flash_blackcat_sphynx,Task B (Open-Set),194.38.20.199,actor_blackcat,actor_fin7,0.4121,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00307
+Config E (Full Hybrid),cisa_aa23_320a_scattered_spider,Task B (Open-Set),146.70.165.22,actor_scattered_spider,actor_apt29,0.3871,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00308
+Config E (Full Hybrid),cisa_aa23_158a_clop_moveit,Task B (Open-Set),148.251.18.231,actor_clop,actor_volt_typhoon,0.3456,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00312
+Config E (Full Hybrid),cisa_aa23_020a_manageengine,Task B (Open-Set),198.51.100.201,AMBIGUOUS_MULTI_ACTOR,actor_lazarus,0.3885,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00313
+Config E (Full Hybrid),cisa_log4j_commodity_scanning,Task B (Open-Set),45.155.205.233,AMBIGUOUS_MULTI_ACTOR,actor_lazarus,0.3926,INCONCLUSIVE,7.0,0.0,0.0,0.0,False,0.00394

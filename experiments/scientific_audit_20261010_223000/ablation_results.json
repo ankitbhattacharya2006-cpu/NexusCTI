@@ -12,8 +12,8 @@
       "hallucination_rate": 58.33,
       "hallucination_count": "7/12",
       "mrr": 0.6042,
-      "total_runtime_sec": 0.004,
-      "avg_runtime_per_case_sec": 0.0003
+      "total_runtime_sec": 0.003,
+      "avg_runtime_per_case_sec": 0.0002
     },
     "cases": [
       {
@@ -27,7 +27,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.6881,
-        "runtime_sec": 0.0004,
+        "runtime_sec": 0.0014,
         "hops": 0
       },
       {
@@ -41,7 +41,7 @@
         "is_correct": false,
         "rank": 3,
         "confidence": 0.3478,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -55,7 +55,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.8752,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -69,7 +69,7 @@
         "is_correct": false,
         "rank": 2,
         "confidence": 0.5865,
-        "runtime_sec": 0.0004,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -83,7 +83,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.5404,
-        "runtime_sec": 0.0004,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -97,7 +97,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.681,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -111,7 +111,7 @@
         "is_correct": false,
         "rank": 3,
         "confidence": 0.3778,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -125,7 +125,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.2288,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -139,7 +139,7 @@
         "is_correct": false,
         "rank": 6,
         "confidence": 0.4136,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -153,7 +153,7 @@
         "is_correct": false,
         "rank": 3,
         "confidence": 0.4119,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -167,7 +167,7 @@
         "is_correct": false,
         "rank": 4,
         "confidence": 0.7926,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       },
       {
@@ -181,7 +181,7 @@
         "is_correct": false,
         "rank": 3,
         "confidence": 0.4343,
-        "runtime_sec": 0.0003,
+        "runtime_sec": 0.0001,
         "hops": 0
       }
     ]
@@ -199,8 +199,8 @@
       "hallucination_rate": 0.0,
       "hallucination_count": "0/12",
       "mrr": 1.0,
-      "total_runtime_sec": 0.015,
-      "avg_runtime_per_case_sec": 0.0013
+      "total_runtime_sec": 0.007,
+      "avg_runtime_per_case_sec": 0.0006
     },
     "cases": [
       {
@@ -214,7 +214,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3268,
-        "runtime_sec": 0.0021,
+        "runtime_sec": 0.001,
         "hops": 0
       },
       {
@@ -228,7 +228,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.9901,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0005,
         "hops": 0
       },
       {
@@ -242,7 +242,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3791,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -256,7 +256,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3094,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0008,
         "hops": 0
       },
       {
@@ -270,7 +270,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3791,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -284,7 +284,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.9852,
-        "runtime_sec": 0.0011,
+        "runtime_sec": 0.0005,
         "hops": 0
       },
       {
@@ -298,7 +298,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.2821,
-        "runtime_sec": 0.0011,
+        "runtime_sec": 0.0005,
         "hops": 0
       },
       {
@@ -312,7 +312,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.2854,
-        "runtime_sec": 0.0011,
+        "runtime_sec": 0.0005,
         "hops": 0
       },
       {
@@ -326,7 +326,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3398,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0005,
         "hops": 0
       },
       {
@@ -340,7 +340,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.9756,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0005,
         "hops": 0
       },
       {
@@ -354,7 +354,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3444,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0005,
         "hops": 0
       },
       {
@@ -368,26 +368,26 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3444,
-        "runtime_sec": 0.0012,
+        "runtime_sec": 0.0005,
         "hops": 0
       }
     ]
   },
   "Config C (GNN-only)": {
     "metrics": {
-      "top1_accuracy": 8.33,
-      "top1_count": "1/12",
-      "top3_accuracy": 33.33,
-      "top3_count": "4/12",
-      "top5_accuracy": 83.33,
-      "top5_count": "10/12",
+      "top1_accuracy": 16.67,
+      "top1_count": "2/12",
+      "top3_accuracy": 41.67,
+      "top3_count": "5/12",
+      "top5_accuracy": 50.0,
+      "top5_count": "6/12",
       "multihop_accuracy": 9.09,
       "multihop_count": "1/11",
-      "hallucination_rate": 91.67,
-      "hallucination_count": "11/12",
-      "mrr": 0.3208,
-      "total_runtime_sec": 0.002,
-      "avg_runtime_per_case_sec": 0.0002
+      "hallucination_rate": 83.33,
+      "hallucination_count": "10/12",
+      "mrr": 0.3681,
+      "total_runtime_sec": 0.001,
+      "avg_runtime_per_case_sec": 0.0001
     },
     "cases": [
       {
@@ -399,9 +399,9 @@
         "ground_truth": "actor_apt29",
         "predicted_top1": "actor_volt_typhoon",
         "is_correct": false,
-        "rank": 2,
-        "confidence": 0.5426,
-        "runtime_sec": 0.0005,
+        "rank": 3,
+        "confidence": 0.4712,
+        "runtime_sec": 0.0004,
         "hops": 0
       },
       {
@@ -411,11 +411,11 @@
         "category": "direct_observation",
         "expected_hops": 1,
         "ground_truth": "actor_sandworm",
-        "predicted_top1": "actor_volt_typhoon",
-        "is_correct": false,
-        "rank": 3,
-        "confidence": 0.28,
-        "runtime_sec": 0.0002,
+        "predicted_top1": "actor_sandworm",
+        "is_correct": true,
+        "rank": 1,
+        "confidence": 0.2271,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -425,11 +425,11 @@
         "category": "direct_observation",
         "expected_hops": 2,
         "ground_truth": "actor_lazarus",
-        "predicted_top1": "actor_apt28",
+        "predicted_top1": "actor_sandworm",
         "is_correct": false,
         "rank": 6,
-        "confidence": 0.2551,
-        "runtime_sec": 0.0002,
+        "confidence": 0.278,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -442,8 +442,8 @@
         "predicted_top1": "actor_lazarus",
         "is_correct": false,
         "rank": 6,
-        "confidence": 0.3329,
-        "runtime_sec": 0.0002,
+        "confidence": 0.3748,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -455,9 +455,9 @@
         "ground_truth": "actor_fin7",
         "predicted_top1": "actor_apt28",
         "is_correct": false,
-        "rank": 5,
-        "confidence": 0.2583,
-        "runtime_sec": 0.0002,
+        "rank": 6,
+        "confidence": 0.2383,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -467,11 +467,11 @@
         "category": "stager_pivot",
         "expected_hops": 2,
         "ground_truth": "actor_sandworm",
-        "predicted_top1": "actor_volt_typhoon",
+        "predicted_top1": "actor_apt29",
         "is_correct": false,
-        "rank": 3,
-        "confidence": 0.3027,
-        "runtime_sec": 0.0002,
+        "rank": 2,
+        "confidence": 0.2569,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -481,11 +481,11 @@
         "category": "infrastructure_pivot",
         "expected_hops": 4,
         "ground_truth": "actor_apt29",
-        "predicted_top1": "actor_volt_typhoon",
-        "is_correct": false,
-        "rank": 4,
-        "confidence": 0.3731,
-        "runtime_sec": 0.0002,
+        "predicted_top1": "actor_apt29",
+        "is_correct": true,
+        "rank": 1,
+        "confidence": 0.3444,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -497,9 +497,9 @@
         "ground_truth": "actor_apt28",
         "predicted_top1": "actor_lazarus",
         "is_correct": false,
-        "rank": 4,
-        "confidence": 0.3344,
-        "runtime_sec": 0.0002,
+        "rank": 6,
+        "confidence": 0.3893,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -509,11 +509,11 @@
         "category": "infrastructure_pivot",
         "expected_hops": 4,
         "ground_truth": "actor_volt_typhoon",
-        "predicted_top1": "actor_apt29",
+        "predicted_top1": "actor_sandworm",
         "is_correct": false,
         "rank": 4,
-        "confidence": 0.2306,
-        "runtime_sec": 0.0002,
+        "confidence": 0.195,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -523,11 +523,11 @@
         "category": "deep_chain",
         "expected_hops": 4,
         "ground_truth": "actor_sandworm",
-        "predicted_top1": "actor_sandworm",
-        "is_correct": true,
-        "rank": 1,
-        "confidence": 0.2794,
-        "runtime_sec": 0.0002,
+        "predicted_top1": "actor_lazarus",
+        "is_correct": false,
+        "rank": 3,
+        "confidence": 0.2689,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -537,11 +537,11 @@
         "category": "deep_chain",
         "expected_hops": 3,
         "ground_truth": "actor_lazarus",
-        "predicted_top1": "actor_apt28",
+        "predicted_top1": "actor_sandworm",
         "is_correct": false,
-        "rank": 5,
-        "confidence": 0.2795,
-        "runtime_sec": 0.0002,
+        "rank": 6,
+        "confidence": 0.2662,
+        "runtime_sec": 0.0,
         "hops": 0
       },
       {
@@ -553,9 +553,9 @@
         "ground_truth": "actor_fin7",
         "predicted_top1": "actor_apt28",
         "is_correct": false,
-        "rank": 5,
-        "confidence": 0.2672,
-        "runtime_sec": 0.0002,
+        "rank": 6,
+        "confidence": 0.2527,
+        "runtime_sec": 0.0,
         "hops": 0
       }
     ]
@@ -573,8 +573,8 @@
       "hallucination_rate": 33.33,
       "hallucination_count": "4/12",
       "mrr": 0.7847,
-      "total_runtime_sec": 0.019,
-      "avg_runtime_per_case_sec": 0.0016
+      "total_runtime_sec": 0.008,
+      "avg_runtime_per_case_sec": 0.0007
     },
     "cases": [
       {
@@ -588,7 +588,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.5074,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -602,7 +602,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.6176,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -616,7 +616,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.6271,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0007,
         "hops": 0
       },
       {
@@ -630,7 +630,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.3614,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -644,7 +644,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.4597,
-        "runtime_sec": 0.0017,
+        "runtime_sec": 0.0007,
         "hops": 0
       },
       {
@@ -658,7 +658,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.8331,
-        "runtime_sec": 0.0017,
+        "runtime_sec": 0.001,
         "hops": 0
       },
       {
@@ -672,7 +672,7 @@
         "is_correct": false,
         "rank": 2,
         "confidence": 0.2853,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0008,
         "hops": 0
       },
       {
@@ -686,7 +686,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.2571,
-        "runtime_sec": 0.0015,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -700,7 +700,7 @@
         "is_correct": false,
         "rank": 4,
         "confidence": 0.2661,
-        "runtime_sec": 0.0015,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -714,7 +714,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.5933,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -728,7 +728,7 @@
         "is_correct": false,
         "rank": 3,
         "confidence": 0.5111,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0006,
         "hops": 0
       },
       {
@@ -742,7 +742,7 @@
         "is_correct": false,
         "rank": 3,
         "confidence": 0.286,
-        "runtime_sec": 0.0016,
+        "runtime_sec": 0.0006,
         "hops": 0
       }
     ]
@@ -760,8 +760,8 @@
       "hallucination_rate": 0.0,
       "hallucination_count": "0/12",
       "mrr": 1.0,
-      "total_runtime_sec": 0.034,
-      "avg_runtime_per_case_sec": 0.0029
+      "total_runtime_sec": 0.012,
+      "avg_runtime_per_case_sec": 0.001
     },
     "cases": [
       {
@@ -774,8 +774,8 @@
         "predicted_top1": "actor_apt29",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.5059,
-        "runtime_sec": 0.0035,
+        "confidence": 0.5073,
+        "runtime_sec": 0.002,
         "hops": 2
       },
       {
@@ -788,8 +788,8 @@
         "predicted_top1": "actor_sandworm",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.4531,
-        "runtime_sec": 0.0033,
+        "confidence": 0.4657,
+        "runtime_sec": 0.0012,
         "hops": 1
       },
       {
@@ -802,8 +802,8 @@
         "predicted_top1": "actor_lazarus",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.5684,
-        "runtime_sec": 0.002,
+        "confidence": 0.5692,
+        "runtime_sec": 0.0009,
         "hops": 2
       },
       {
@@ -816,8 +816,8 @@
         "predicted_top1": "actor_apt28",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.4676,
-        "runtime_sec": 0.0026,
+        "confidence": 0.4655,
+        "runtime_sec": 0.0009,
         "hops": 2
       },
       {
@@ -830,8 +830,8 @@
         "predicted_top1": "actor_fin7",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.4728,
-        "runtime_sec": 0.0027,
+        "confidence": 0.4723,
+        "runtime_sec": 0.0008,
         "hops": 2
       },
       {
@@ -844,8 +844,8 @@
         "predicted_top1": "actor_sandworm",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.5978,
-        "runtime_sec": 0.003,
+        "confidence": 0.6087,
+        "runtime_sec": 0.001,
         "hops": 2
       },
       {
@@ -858,8 +858,8 @@
         "predicted_top1": "actor_apt29",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.4504,
-        "runtime_sec": 0.0033,
+        "confidence": 0.484,
+        "runtime_sec": 0.0008,
         "hops": 4
       },
       {
@@ -872,8 +872,8 @@
         "predicted_top1": "actor_apt28",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.4418,
-        "runtime_sec": 0.0027,
+        "confidence": 0.4404,
+        "runtime_sec": 0.0009,
         "hops": 3
       },
       {
@@ -887,7 +887,7 @@
         "is_correct": true,
         "rank": 1,
         "confidence": 0.4538,
-        "runtime_sec": 0.0028,
+        "runtime_sec": 0.0008,
         "hops": 4
       },
       {
@@ -900,8 +900,8 @@
         "predicted_top1": "actor_sandworm",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.5502,
-        "runtime_sec": 0.003,
+        "confidence": 0.5246,
+        "runtime_sec": 0.0009,
         "hops": 4
       },
       {
@@ -914,8 +914,8 @@
         "predicted_top1": "actor_lazarus",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.4882,
-        "runtime_sec": 0.0028,
+        "confidence": 0.4903,
+        "runtime_sec": 0.0007,
         "hops": 3
       },
       {
@@ -928,8 +928,8 @@
         "predicted_top1": "actor_fin7",
         "is_correct": true,
         "rank": 1,
-        "confidence": 0.391,
-        "runtime_sec": 0.0025,
+        "confidence": 0.3901,
+        "runtime_sec": 0.0007,
         "hops": 3
       }
     ]

@@ -1,0 +1,152 @@
+{
+  "ioc_leak_scan": {
+    "total_cases_audited": 48,
+    "total_ioc_matches_found": 1,
+    "matches": [
+      {
+        "case_id": "cisa_aa23_347a_apt28_roundcube",
+        "ioc": "185.141.63.120",
+        "node_id": "ioc_ip_185_141_63_12",
+        "node_name": "185.141.63.12",
+        "is_exact": false,
+        "leak_mechanism": "substring: node.name in ioc"
+      }
+    ]
+  },
+  "leaked_case_analysis": {
+    "case_id": "cisa_aa23_347a_apt28_roundcube",
+    "ioc": "185.141.63.120",
+    "matched_graph_node": "ioc_ip_185_141_63_12",
+    "root_cause": "nexuscti/gnn/graph_builder.py:find_node_by_indicator: 'node.name.lower() in val.lower()' evaluates True because '185.141.63.12' is a prefix substring of '185.141.63.120'",
+    "predictions": [
+      {
+        "config": "Config A (Vector-only)",
+        "case_id": "cisa_aa23_347a_apt28_roundcube",
+        "campaign_name": "Roundcube Webmail Zero-Day Exploitation",
+        "task": "Task A: Known Actor, Unseen Campaign",
+        "anchor_ioc": "185.141.63.120",
+        "ground_truth": "actor_apt28",
+        "predicted_top1": "actor_apt28",
+        "is_correct": "True",
+        "rank": "1",
+        "confidence": "0.4325",
+        "verdict": "ABSTAIN",
+        "multi_hop_depth": "0",
+        "has_verified_trail": "False",
+        "runtime_sec": "0.0001"
+      },
+      {
+        "config": "Config B (Graph-only)",
+        "case_id": "cisa_aa23_347a_apt28_roundcube",
+        "campaign_name": "Roundcube Webmail Zero-Day Exploitation",
+        "task": "Task A: Known Actor, Unseen Campaign",
+        "anchor_ioc": "185.141.63.120",
+        "ground_truth": "actor_apt28",
+        "predicted_top1": "actor_apt28",
+        "is_correct": "True",
+        "rank": "1",
+        "confidence": "0.2854",
+        "verdict": "ABSTAIN",
+        "multi_hop_depth": "0",
+        "has_verified_trail": "False",
+        "runtime_sec": "0.00111"
+      },
+      {
+        "config": "Config C (GNN-only)",
+        "case_id": "cisa_aa23_347a_apt28_roundcube",
+        "campaign_name": "Roundcube Webmail Zero-Day Exploitation",
+        "task": "Task A: Known Actor, Unseen Campaign",
+        "anchor_ioc": "185.141.63.120",
+        "ground_truth": "actor_apt28",
+        "predicted_top1": "actor_lazarus",
+        "is_correct": "False",
+        "rank": "6",
+        "confidence": "0.3617",
+        "verdict": "ABSTAIN",
+        "multi_hop_depth": "0",
+        "has_verified_trail": "False",
+        "runtime_sec": "0.00065"
+      },
+      {
+        "config": "Config D (Graph + RAG)",
+        "case_id": "cisa_aa23_347a_apt28_roundcube",
+        "campaign_name": "Roundcube Webmail Zero-Day Exploitation",
+        "task": "Task A: Known Actor, Unseen Campaign",
+        "anchor_ioc": "185.141.63.120",
+        "ground_truth": "actor_apt28",
+        "predicted_top1": "actor_apt28",
+        "is_correct": "True",
+        "rank": "1",
+        "confidence": "0.3589",
+        "verdict": "ABSTAIN",
+        "multi_hop_depth": "0",
+        "has_verified_trail": "False",
+        "runtime_sec": "0.00081"
+      },
+      {
+        "config": "Config E (Full Hybrid)",
+        "case_id": "cisa_aa23_347a_apt28_roundcube",
+        "campaign_name": "Roundcube Webmail Zero-Day Exploitation",
+        "task": "Task A: Known Actor, Unseen Campaign",
+        "anchor_ioc": "185.141.63.120",
+        "ground_truth": "actor_apt28",
+        "predicted_top1": "actor_apt28",
+        "is_correct": "True",
+        "rank": "1",
+        "confidence": "0.5201",
+        "verdict": "PROBABLE",
+        "multi_hop_depth": "3",
+        "has_verified_trail": "True",
+        "runtime_sec": "0.00097"
+      }
+    ],
+    "impact_summary": {
+      "config_a": "No impact: Config A does not use IOC or graph; relies solely on passage text (which mentions APT28). Correct at Rank 1 regardless.",
+      "config_b": "Top-1 unaffected due to tie-breaking artifact (APT28 is index 0 of candidate list, so uniform distance also yields Rank 1), but confidence was 0.2854 (real path) instead of 0.1667 (uniform).",
+      "config_c": "GNN predicted Lazarus (rank 6 for APT28). Without leak, returned empty/zero (rank 6). Net metric impact: 0.00%.",
+      "config_d": "Top-1 unaffected (both A and B ranked APT28 #1).",
+      "config_e": "Both text and graph components ranked APT28 #1. In counterfactual without leak, text retrieval (rank 1) dominates uniform graph, so Top-1 is preserved. McNemar comparison against Config A is unchanged."
+    }
+  },
+  "passage_actor_name_leak": {
+    "task_a_total": 32,
+    "task_a_passages_with_actor_name_or_alias": 32,
+    "task_a_fraction": "32/32 (100.0%)",
+    "sole_case_without_name": "cisa_aa20_225a_drovorub (mentions Russian GRU Unit 26165/GTsSS, but not APT28)",
+    "accuracy_on_named_vs_unnamed": {
+      "with_actor_name": {
+        "count": 32,
+        "config_a_top1": 16,
+        "config_a_top1_pct": 51.61290322580645,
+        "config_e_top1": 16,
+        "config_e_top1_pct": 51.61290322580645
+      },
+      "without_actor_name": {
+        "count": 0,
+        "config_a_top1": 0,
+        "config_a_top1_pct": 0.0,
+        "config_e_top1": 0,
+        "config_e_top1_pct": 0.0
+      }
+    },
+    "task_b_candidate_actor_mentions": 0
+  },
+  "graph_mutation_audit": {
+    "description": "Config E calls service.analyze() which calls service.tkg.add_temporary_ioc_node() for unseen IOCs. 47 isolated nodes were added during Config E run.",
+    "cross_contamination": "None for Configs A-D because Config E ran last. For Config E internally, graph accumulated isolated nodes across 48 cases, though isolated nodes did not change shortest paths or GNN message passing."
+  },
+  "mcnemar_statistical_status": {
+    "config_e_top3": "30/32 (93.75%)",
+    "config_a_top3": "27/32 (84.38%)",
+    "discordant_pairs": {
+      "b_e_better": 3,
+      "c_a_better": 0
+    },
+    "exact_mcnemar_p_value": 0.375,
+    "agresti_min_95ci": [
+      -0.038,
+      0.214
+    ],
+    "statistically_significant": false
+  }
+}

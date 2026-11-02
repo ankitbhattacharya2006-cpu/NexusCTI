@@ -1,0 +1,61 @@
+config,case_id,case_name,category,expected_hops,ground_truth,predicted_top1,is_correct,rank,confidence,hops,runtime_sec
+Config A (Vector-only),test_case_01,APT29 SUNBURST Direct Backdoor Detection,direct_observation,2,actor_apt29,actor_apt29,True,1,0.6881,0,0.0004
+Config A (Vector-only),test_case_02,Sandworm Industroyer Power Grid Payload,direct_observation,1,actor_sandworm,actor_apt28,False,3,0.3478,0,0.0003
+Config A (Vector-only),test_case_03,Lazarus AppleJeus Trojanized Installer,direct_observation,2,actor_lazarus,actor_lazarus,True,1,0.8752,0,0.0003
+Config A (Vector-only),test_case_04,APT28 Zebrocy Binary Hash to C2 Pivot,stager_pivot,2,actor_apt28,actor_sandworm,False,2,0.5865,0,0.0004
+Config A (Vector-only),test_case_05,FIN7 Griffon Stager & Zerologon Exploitation,stager_pivot,2,actor_fin7,actor_fin7,True,1,0.5404,0,0.0004
+Config A (Vector-only),test_case_06,Sandworm NotPetya Wiper Binary Artifact,stager_pivot,2,actor_sandworm,actor_sandworm,True,1,0.681,0,0.0003
+Config A (Vector-only),test_case_07,APT29 Multi-Hop Secondary Infrastructure Pivot,infrastructure_pivot,4,actor_apt29,actor_fin7,False,3,0.3778,0,0.0003
+Config A (Vector-only),test_case_08,APT28 Shared DNS Resolution Pivot,infrastructure_pivot,3,actor_apt28,actor_apt28,True,1,0.2288,0,0.0003
+Config A (Vector-only),test_case_09,Volt Typhoon SOHO Mesh Egress Pivot,infrastructure_pivot,4,actor_volt_typhoon,actor_sandworm,False,6,0.4136,0,0.0003
+Config A (Vector-only),test_case_10,Sandworm Obfuscated Subnet Pivot to BlackEnergy C2,deep_chain,4,actor_sandworm,actor_apt28,False,3,0.4119,0,0.0003
+Config A (Vector-only),test_case_11,Lazarus North Korean AS131279 Gateway Correlation,deep_chain,3,actor_lazarus,actor_apt28,False,4,0.7926,0,0.0003
+Config A (Vector-only),test_case_12,FIN7 Hosting Staging Infrastructure Pivot,deep_chain,3,actor_fin7,actor_apt29,False,3,0.4343,0,0.0003
+Config B (Graph-only),test_case_01,APT29 SUNBURST Direct Backdoor Detection,direct_observation,2,actor_apt29,actor_apt29,True,1,0.3268,0,0.0021
+Config B (Graph-only),test_case_02,Sandworm Industroyer Power Grid Payload,direct_observation,1,actor_sandworm,actor_sandworm,True,1,0.9901,0,0.0012
+Config B (Graph-only),test_case_03,Lazarus AppleJeus Trojanized Installer,direct_observation,2,actor_lazarus,actor_lazarus,True,1,0.3791,0,0.0012
+Config B (Graph-only),test_case_04,APT28 Zebrocy Binary Hash to C2 Pivot,stager_pivot,2,actor_apt28,actor_apt28,True,1,0.3094,0,0.0012
+Config B (Graph-only),test_case_05,FIN7 Griffon Stager & Zerologon Exploitation,stager_pivot,2,actor_fin7,actor_fin7,True,1,0.3791,0,0.0012
+Config B (Graph-only),test_case_06,Sandworm NotPetya Wiper Binary Artifact,stager_pivot,2,actor_sandworm,actor_sandworm,True,1,0.9852,0,0.0011
+Config B (Graph-only),test_case_07,APT29 Multi-Hop Secondary Infrastructure Pivot,infrastructure_pivot,4,actor_apt29,actor_apt29,True,1,0.2821,0,0.0011
+Config B (Graph-only),test_case_08,APT28 Shared DNS Resolution Pivot,infrastructure_pivot,3,actor_apt28,actor_apt28,True,1,0.2854,0,0.0011
+Config B (Graph-only),test_case_09,Volt Typhoon SOHO Mesh Egress Pivot,infrastructure_pivot,4,actor_volt_typhoon,actor_volt_typhoon,True,1,0.3398,0,0.0012
+Config B (Graph-only),test_case_10,Sandworm Obfuscated Subnet Pivot to BlackEnergy C2,deep_chain,4,actor_sandworm,actor_sandworm,True,1,0.9756,0,0.0012
+Config B (Graph-only),test_case_11,Lazarus North Korean AS131279 Gateway Correlation,deep_chain,3,actor_lazarus,actor_lazarus,True,1,0.3444,0,0.0012
+Config B (Graph-only),test_case_12,FIN7 Hosting Staging Infrastructure Pivot,deep_chain,3,actor_fin7,actor_fin7,True,1,0.3444,0,0.0012
+Config C (GNN-only),test_case_01,APT29 SUNBURST Direct Backdoor Detection,direct_observation,2,actor_apt29,actor_volt_typhoon,False,2,0.5426,0,0.0005
+Config C (GNN-only),test_case_02,Sandworm Industroyer Power Grid Payload,direct_observation,1,actor_sandworm,actor_volt_typhoon,False,3,0.28,0,0.0002
+Config C (GNN-only),test_case_03,Lazarus AppleJeus Trojanized Installer,direct_observation,2,actor_lazarus,actor_apt28,False,6,0.2551,0,0.0002
+Config C (GNN-only),test_case_04,APT28 Zebrocy Binary Hash to C2 Pivot,stager_pivot,2,actor_apt28,actor_lazarus,False,6,0.3329,0,0.0002
+Config C (GNN-only),test_case_05,FIN7 Griffon Stager & Zerologon Exploitation,stager_pivot,2,actor_fin7,actor_apt28,False,5,0.2583,0,0.0002
+Config C (GNN-only),test_case_06,Sandworm NotPetya Wiper Binary Artifact,stager_pivot,2,actor_sandworm,actor_volt_typhoon,False,3,0.3027,0,0.0002
+Config C (GNN-only),test_case_07,APT29 Multi-Hop Secondary Infrastructure Pivot,infrastructure_pivot,4,actor_apt29,actor_volt_typhoon,False,4,0.3731,0,0.0002
+Config C (GNN-only),test_case_08,APT28 Shared DNS Resolution Pivot,infrastructure_pivot,3,actor_apt28,actor_lazarus,False,4,0.3344,0,0.0002
+Config C (GNN-only),test_case_09,Volt Typhoon SOHO Mesh Egress Pivot,infrastructure_pivot,4,actor_volt_typhoon,actor_apt29,False,4,0.2306,0,0.0002
+Config C (GNN-only),test_case_10,Sandworm Obfuscated Subnet Pivot to BlackEnergy C2,deep_chain,4,actor_sandworm,actor_sandworm,True,1,0.2794,0,0.0002
+Config C (GNN-only),test_case_11,Lazarus North Korean AS131279 Gateway Correlation,deep_chain,3,actor_lazarus,actor_apt28,False,5,0.2795,0,0.0002
+Config C (GNN-only),test_case_12,FIN7 Hosting Staging Infrastructure Pivot,deep_chain,3,actor_fin7,actor_apt28,False,5,0.2672,0,0.0002
+Config D (Graph + RAG),test_case_01,APT29 SUNBURST Direct Backdoor Detection,direct_observation,2,actor_apt29,actor_apt29,True,1,0.5074,0,0.0016
+Config D (Graph + RAG),test_case_02,Sandworm Industroyer Power Grid Payload,direct_observation,1,actor_sandworm,actor_sandworm,True,1,0.6176,0,0.0016
+Config D (Graph + RAG),test_case_03,Lazarus AppleJeus Trojanized Installer,direct_observation,2,actor_lazarus,actor_lazarus,True,1,0.6271,0,0.0016
+Config D (Graph + RAG),test_case_04,APT28 Zebrocy Binary Hash to C2 Pivot,stager_pivot,2,actor_apt28,actor_apt28,True,1,0.3614,0,0.0016
+Config D (Graph + RAG),test_case_05,FIN7 Griffon Stager & Zerologon Exploitation,stager_pivot,2,actor_fin7,actor_fin7,True,1,0.4597,0,0.0017
+Config D (Graph + RAG),test_case_06,Sandworm NotPetya Wiper Binary Artifact,stager_pivot,2,actor_sandworm,actor_sandworm,True,1,0.8331,0,0.0017
+Config D (Graph + RAG),test_case_07,APT29 Multi-Hop Secondary Infrastructure Pivot,infrastructure_pivot,4,actor_apt29,actor_volt_typhoon,False,2,0.2853,0,0.0016
+Config D (Graph + RAG),test_case_08,APT28 Shared DNS Resolution Pivot,infrastructure_pivot,3,actor_apt28,actor_apt28,True,1,0.2571,0,0.0015
+Config D (Graph + RAG),test_case_09,Volt Typhoon SOHO Mesh Egress Pivot,infrastructure_pivot,4,actor_volt_typhoon,actor_apt28,False,4,0.2661,0,0.0015
+Config D (Graph + RAG),test_case_10,Sandworm Obfuscated Subnet Pivot to BlackEnergy C2,deep_chain,4,actor_sandworm,actor_sandworm,True,1,0.5933,0,0.0016
+Config D (Graph + RAG),test_case_11,Lazarus North Korean AS131279 Gateway Correlation,deep_chain,3,actor_lazarus,actor_apt28,False,3,0.5111,0,0.0016
+Config D (Graph + RAG),test_case_12,FIN7 Hosting Staging Infrastructure Pivot,deep_chain,3,actor_fin7,actor_apt29,False,3,0.286,0,0.0016
+Config E (Full Hybrid),test_case_01,APT29 SUNBURST Direct Backdoor Detection,direct_observation,2,actor_apt29,actor_apt29,True,1,0.5059,2,0.0035
+Config E (Full Hybrid),test_case_02,Sandworm Industroyer Power Grid Payload,direct_observation,1,actor_sandworm,actor_sandworm,True,1,0.4531,1,0.0033
+Config E (Full Hybrid),test_case_03,Lazarus AppleJeus Trojanized Installer,direct_observation,2,actor_lazarus,actor_lazarus,True,1,0.5684,2,0.002
+Config E (Full Hybrid),test_case_04,APT28 Zebrocy Binary Hash to C2 Pivot,stager_pivot,2,actor_apt28,actor_apt28,True,1,0.4676,2,0.0026
+Config E (Full Hybrid),test_case_05,FIN7 Griffon Stager & Zerologon Exploitation,stager_pivot,2,actor_fin7,actor_fin7,True,1,0.4728,2,0.0027
+Config E (Full Hybrid),test_case_06,Sandworm NotPetya Wiper Binary Artifact,stager_pivot,2,actor_sandworm,actor_sandworm,True,1,0.5978,2,0.003
+Config E (Full Hybrid),test_case_07,APT29 Multi-Hop Secondary Infrastructure Pivot,infrastructure_pivot,4,actor_apt29,actor_apt29,True,1,0.4504,4,0.0033
+Config E (Full Hybrid),test_case_08,APT28 Shared DNS Resolution Pivot,infrastructure_pivot,3,actor_apt28,actor_apt28,True,1,0.4418,3,0.0027
+Config E (Full Hybrid),test_case_09,Volt Typhoon SOHO Mesh Egress Pivot,infrastructure_pivot,4,actor_volt_typhoon,actor_volt_typhoon,True,1,0.4538,4,0.0028
+Config E (Full Hybrid),test_case_10,Sandworm Obfuscated Subnet Pivot to BlackEnergy C2,deep_chain,4,actor_sandworm,actor_sandworm,True,1,0.5502,4,0.003
+Config E (Full Hybrid),test_case_11,Lazarus North Korean AS131279 Gateway Correlation,deep_chain,3,actor_lazarus,actor_lazarus,True,1,0.4882,3,0.0028
+Config E (Full Hybrid),test_case_12,FIN7 Hosting Staging Infrastructure Pivot,deep_chain,3,actor_fin7,actor_fin7,True,1,0.391,3,0.0025

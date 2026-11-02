@@ -1,0 +1,6 @@
+configuration,task_a_n,top1_accuracy_pct,top1_count,top3_accuracy_pct,top3_count,top5_accuracy_pct,top5_count,mrr,hallucination_rate_pct,task_b_n,task_b_proper_abstention_pct,task_b_abstention_count,task_b_false_attribution_pct,task_b_false_attribution_count,total_runtime_sec,avg_case_runtime_sec
+Config A (Vector-only),32,50.0,16/32,84.38,27/32,84.38,27/32,0.651,50.0,16,75.0,12/16,25.0,4/16,0.0064,0.00013
+Config B (Graph-only),32,15.62,5/32,50.0,16/32,84.38,27/32,0.3995,84.38,16,100.0,16/16,0.0,0/16,0.0022,5e-05
+Config C (GNN-only),32,0.0,0/32,0.0,0/32,0.0,0/32,0.0052,100.0,16,100.0,16/16,0.0,0/16,0.0016,3e-05
+Config D (Graph + RAG),32,50.0,16/32,87.5,28/32,100.0,32/32,0.6896,50.0,16,100.0,16/16,0.0,0/16,0.0066,0.00014
+Config E (Full Hybrid),32,50.0,16/32,93.75,30/32,100.0,32/32,0.7083,50.0,16,100.0,16/16,0.0,0/16,0.1008,0.0021

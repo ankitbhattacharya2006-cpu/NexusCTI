@@ -74,100 +74,106 @@ class SynergisticFusionEngine:
 
         # Step 1: Resolve or dynamically register IOC in the Knowledge Graph
         resolved_node = self.tkg.find_node_by_indicator(target_ioc)
+        is_temporary = False
         if resolved_node:
             node_id = resolved_node.id
         else:
-            # Dynamically ingest novel IOC into graph topology
+            # Dynamically ingest novel IOC into graph topology for reasoning
             node_id = self.tkg.add_temporary_ioc_node(target_ioc)
+            is_temporary = True
 
-        # Step 2: GNN Structural Relational Inference
-        gnn_predictions = self.gnn_trainer.predict_attribution(node_id)
-        gnn_score_map = {p["actor_id"]: p["structural_confidence"] for p in gnn_predictions}
+        try:
+            # Step 2: GNN Structural Relational Inference
+            gnn_predictions = self.gnn_trainer.predict_attribution(node_id)
+            gnn_score_map = {p["actor_id"]: p["structural_confidence"] for p in gnn_predictions}
 
-        # Step 3: Hybrid Textual RAG Retrieval
-        rag_proofs = self.retriever.retrieve(query, top_k=5)
-        rag_predictions = self.retriever.predict_attribution(query)
-        rag_score_map = {p["actor_id"]: p["textual_confidence"] for p in rag_predictions}
+            # Step 3: Hybrid Textual RAG Retrieval
+            rag_proofs = self.retriever.retrieve(query, top_k=5)
+            rag_predictions = self.retriever.predict_attribution(query)
+            rag_score_map = {p["actor_id"]: p["textual_confidence"] for p in rag_predictions}
 
-        # Step 4: Cross-Validation & Synergistic Fusion
-        all_actor_ids = set(gnn_score_map.keys()) | set(rag_score_map.keys())
-        candidates: List[AttributedActorCandidate] = []
+            # Step 4: Cross-Validation & Synergistic Fusion
+            all_actor_ids = set(gnn_score_map.keys()) | set(rag_score_map.keys())
+            candidates: List[AttributedActorCandidate] = []
 
-        for actor_id in all_actor_ids:
-            actor_node = self.tkg.node_dict.get(actor_id)
-            actor_name = actor_node.name if actor_node else actor_id
+            for actor_id in all_actor_ids:
+                actor_node = self.tkg.node_dict.get(actor_id)
+                actor_name = actor_node.name if actor_node else actor_id
 
-            s_score = gnn_score_map.get(actor_id, 0.05)
-            t_score = rag_score_map.get(actor_id, 0.05)
+                s_score = gnn_score_map.get(actor_id, 0.05)
+                t_score = rag_score_map.get(actor_id, 0.05)
 
-            # Extract candidate graph trail
-            trail = self.trail_extractor.extract_best_trail(node_id, actor_id, max_hops=5)
+                # Extract candidate graph trail
+                trail = self.trail_extractor.extract_best_trail(node_id, actor_id, max_hops=5)
 
-            # Compute cross-validation consistency
-            # Check if trail entities or relations are substantiated by retrieved text
-            cv_score = self._compute_cross_validation(trail, rag_proofs, actor_id)
+                # Compute cross-validation consistency
+                # Check if trail entities or relations are substantiated by retrieved text
+                cv_score = self._compute_cross_validation(trail, rag_proofs, actor_id)
 
-            # Fused attribution score
-            fused = (
-                FUSION_WEIGHT_GNN * s_score +
-                FUSION_WEIGHT_RAG * t_score +
-                FUSION_WEIGHT_CROSS_VAL * cv_score
-            )
-            fused = min(round(fused, 4), 0.99)
+                # Fused attribution score
+                fused = (
+                    FUSION_WEIGHT_GNN * s_score +
+                    FUSION_WEIGHT_RAG * t_score +
+                    FUSION_WEIGHT_CROSS_VAL * cv_score
+                )
+                fused = min(round(fused, 4), 0.99)
 
-            if fused >= ATTRIBUTION_THRESHOLD_HIGH:
-                verdict = "HIGH_CONFIDENCE"
-            elif fused >= ATTRIBUTION_THRESHOLD_MEDIUM:
-                verdict = "PROBABLE"
+                if fused >= ATTRIBUTION_THRESHOLD_HIGH:
+                    verdict = "HIGH_CONFIDENCE"
+                elif fused >= ATTRIBUTION_THRESHOLD_MEDIUM:
+                    verdict = "PROBABLE"
+                else:
+                    verdict = "INCONCLUSIVE"
+
+                actor_proofs = [p for p in rag_proofs if p.target_actor == actor_id]
+
+                candidates.append(AttributedActorCandidate(
+                    actor_id=actor_id,
+                    actor_name=actor_name,
+                    fused_confidence=fused,
+                    structural_confidence=round(s_score, 4),
+                    textual_confidence=round(t_score, 4),
+                    cross_validation_score=round(cv_score, 4),
+                    verdict=verdict,
+                    graph_trail=trail,
+                    narrative_proofs=actor_proofs
+                ))
+
+            # Rank candidates descending by fused confidence
+            candidates.sort(key=lambda x: x.fused_confidence, reverse=True)
+
+            top_candidate = candidates[0] if candidates else None
+            top_trail = top_candidate.graph_trail if top_candidate else None
+            top_proofs = top_candidate.narrative_proofs if top_candidate else rag_proofs
+
+            # Determine multi-hop reasoning depth
+            hop_depth = top_trail.hop_count if top_trail else 0
+
+            # Determine hallucination risk
+            if top_candidate and top_candidate.cross_validation_score >= 0.70:
+                hallucination_risk = "MINIMAL (Dual Grounded)"
+            elif top_candidate and top_candidate.cross_validation_score >= 0.40:
+                hallucination_risk = "MODERATE (Partial Grounding)"
             else:
-                verdict = "INCONCLUSIVE"
+                hallucination_risk = "HIGH (Siloed or Unverified)"
 
-            actor_proofs = [p for p in rag_proofs if p.target_actor == actor_id]
+            # Synergistic rationale synthesis
+            rationale = self._synthesize_rationale(top_candidate, top_trail, top_proofs)
 
-            candidates.append(AttributedActorCandidate(
-                actor_id=actor_id,
-                actor_name=actor_name,
-                fused_confidence=fused,
-                structural_confidence=round(s_score, 4),
-                textual_confidence=round(t_score, 4),
-                cross_validation_score=round(cv_score, 4),
-                verdict=verdict,
-                graph_trail=trail,
-                narrative_proofs=actor_proofs
-            ))
-
-        # Rank candidates descending by fused confidence
-        candidates.sort(key=lambda x: x.fused_confidence, reverse=True)
-
-        top_candidate = candidates[0] if candidates else None
-        top_trail = top_candidate.graph_trail if top_candidate else None
-        top_proofs = top_candidate.narrative_proofs if top_candidate else rag_proofs
-
-        # Determine multi-hop reasoning depth
-        hop_depth = top_trail.hop_count if top_trail else 0
-
-        # Determine hallucination risk
-        if top_candidate and top_candidate.cross_validation_score >= 0.70:
-            hallucination_risk = "MINIMAL (Dual Grounded)"
-        elif top_candidate and top_candidate.cross_validation_score >= 0.40:
-            hallucination_risk = "MODERATE (Partial Grounding)"
-        else:
-            hallucination_risk = "HIGH (Siloed or Unverified)"
-
-        # Synergistic rationale synthesis
-        rationale = self._synthesize_rationale(top_candidate, top_trail, top_proofs)
-
-        return FusionAnalysisResult(
-            query_ioc=target_ioc,
-            resolved_node_id=node_id,
-            top_actor=top_candidate,
-            all_candidates=candidates,
-            graph_trail=top_trail,
-            narrative_proofs=top_proofs,
-            synergistic_rationale=rationale,
-            multi_hop_depth=hop_depth,
-            hallucination_risk=hallucination_risk
-        )
+            return FusionAnalysisResult(
+                query_ioc=target_ioc,
+                resolved_node_id=node_id if not is_temporary else None,
+                top_actor=top_candidate,
+                all_candidates=candidates,
+                graph_trail=top_trail,
+                narrative_proofs=top_proofs,
+                synergistic_rationale=rationale,
+                multi_hop_depth=hop_depth,
+                hallucination_risk=hallucination_risk
+            )
+        finally:
+            if is_temporary:
+                self.tkg.remove_temporary_ioc_node(node_id)
 
     def _compute_cross_validation(
         self,

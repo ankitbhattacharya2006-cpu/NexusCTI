@@ -1,7 +1,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*$py.class
+*.class
 
 # C extensions
 *.so
@@ -31,6 +31,33 @@ MANIFEST
 venv/
 ENV/
 env/
+
+# Environment variables, credentials, and secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Logs, databases, and temporary caches
+*.log
+logs/
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.tmp
+*.temp
+*.bak
 
 # Streamlit local cache & large archives
 .streamlit/

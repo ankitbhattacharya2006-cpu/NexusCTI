@@ -61,6 +61,10 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                 Knowledge Graph Explorer
             </button>
+            <button class="tab-btn" data-tab="actors-view" id="tab-btn-actors">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Threat Actor Directory
+            </button>
             <button class="tab-btn" data-tab="benchmark" id="tab-btn-benchmark">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"></path></svg>
                 Empirical Benchmarks
@@ -83,7 +87,7 @@
 
                     <!-- Pre-loaded Scenario Selector -->
                     <div class="control-group">
-                        <label class="control-label">Pre-loaded Benchmark Scenarios</label>
+                        <label class="control-label">Investigation Scenarios</label>
                         <div class="scenario-buttons" id="scenario-list">
                             <!-- Populated dynamically via JS -->
                             <div class="loading-spinner">Loading scenarios...</div>
@@ -101,14 +105,22 @@
                         <input type="text" id="anchor-ioc" placeholder="e.g., 185.225.17.42 or avsvmcloud[.]com">
                     </div>
 
-                    <button class="btn btn-primary pulse-btn" id="btn-run-attribution">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                        Execute Attribution Engine
-                    </button>
+                    <div class="btn-row">
+                        <button class="btn btn-primary pulse-btn" id="btn-run-attribution" style="flex: 2;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            Execute Attribution
+                        </button>
+                        <button class="btn btn-secondary" id="btn-lookup-ioc" style="flex: 1;" title="Inspect indicator in knowledge graph">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            Inspect Node
+                        </button>
+                    </div>
                 </aside>
 
                 <!-- Right Area: Results & Dual-Layer Evidence -->
                 <section class="workbench-results">
+                    <!-- Dynamic Alert Banner -->
+                    <div id="attribution-alert-banner" class="alert-banner" style="display: none;"></div>
                     <!-- Top Summary Card -->
                     <div class="attribution-card glass-panel" id="attribution-summary-card">
                         <div class="attribution-header">
@@ -242,6 +254,22 @@
                         <div class="legend-item"><span class="dot purple"></span> CVE</div>
                     </div>
                     <div class="node-tooltip" id="node-tooltip"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- MAIN VIEW: THREAT ACTOR DIRECTORY -->
+        <main class="view-panel" id="view-actors-view">
+            <div class="glass-panel" style="padding: 1.5rem; margin-bottom: 1.5rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <h2>🥷 Threat Actor Intelligence Directory</h2>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem;">Authoritative profiles of tracked adversary groups indexed in the NexusCTI knowledge graph.</p>
+                    </div>
+                    <span class="badge neon-badge" id="actors-count-badge">Tracked Adversaries</span>
+                </div>
+                <div class="actors-grid" id="actors-directory-container">
+                    <div class="empty-state">Loading threat actors...</div>
                 </div>
             </div>
         </main>

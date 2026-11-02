@@ -13,6 +13,7 @@ import sys
 import time
 import json
 import csv
+import platform
 from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
@@ -300,12 +301,11 @@ class AblationExperimentSuite:
                 "experiment_id": "scientific_audit_20261010_223000",
                 "date": datetime.now().astimezone().isoformat(),
                 "environment": {
-                    "os": "Windows 11",
-                    "shell": "PowerShell 5.1",
+                    "os": f"{platform.system()} {platform.release()}",
                     "python_executable": sys.executable,
                     "python_version": sys.version
                 },
-                "execution_command": ".\\.venv\\Scripts\\python.exe -u experiments/scientific_audit_20261010_223000/run_ablations.py",
+                "execution_command": f"{sys.executable} experiments/scientific_audit_20261010_223000/run_ablations.py",
                 "total_cases_evaluated": len(self.dataset),
                 "random_seed": None,
                 "evaluation_metrics_produced": [

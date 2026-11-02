@@ -1,0 +1,14 @@
+{
+  "manifest_version": "1.0",
+  "experiment_id": "phase11_large_sample_evaluation_20261031",
+  "date": "2026-10-31T21:42:40+0530",
+  "environment": {
+    "os": "Darwin 27.0.0",
+    "python_executable": "/Users/ankitbhattacharya/Documents/project/NexusCTI-main/.venv/bin/python",
+    "python_version": "3.12.2 (main, Jun 29 2026, 21:24:58) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "execution_command": "/Users/ankitbhattacharya/Documents/project/NexusCTI-main/.venv/bin/python experiments/phase11_large_sample_evaluation/run_phase11_evaluation.py",
+  "total_cases_evaluated": 48,
+  "dataset_provenance": "Authentic external CTI advisories (CISA, Microsoft MSRC, UK NCSC, ESET, Mandiant, US Treasury) 2020-2024",
+  "status": "COMPLETED_REPRODUCIBLE"
+}

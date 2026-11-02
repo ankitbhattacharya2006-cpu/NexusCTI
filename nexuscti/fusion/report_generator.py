@@ -6,9 +6,19 @@ into actionable reports for SOC analysts and incident responders.
 
 from typing import Dict, Any, List
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 
 from .engine import FusionAnalysisResult
+
+
+def _dump_model(obj: Any) -> Any:
+    if obj is None:
+        return None
+    if hasattr(obj, "model_dump"):
+        return obj.model_dump()
+    if hasattr(obj, "dict"):
+        return obj.dict()
+    return obj
 
 
 class AttributionReportGenerator:
@@ -29,7 +39,7 @@ class AttributionReportGenerator:
 
         md = []
         md.append(f"# 🛡️ NEXUS-CTI VERIFIABLE THREAT ATTRIBUTION BRIEF")
-        md.append(f"**Generated:** {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')} | **System:** NexusCTI Multi-Modal Engine")
+        md.append(f"**Generated:** {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')} | **System:** NexusCTI Multi-Modal Engine")
         md.append(f"**Investigated Indicator:** `{result.query_ioc}`")
         md.append(f"**Attributed Threat Actor:** **{top.actor_name}**")
         md.append(f"**Confidence Verdict:** `{top.verdict}` ({top.fused_confidence * 100:.1f}%)")
@@ -75,7 +85,7 @@ class AttributionReportGenerator:
         if proofs:
             for idx, proof in enumerate(proofs, 1):
                 md.append(f"### Evidence Passage #{idx} — *{proof.source}* ({proof.date})")
-                md.append(f"> \"{proof.relevant_text.strip()}\"\n")
+                md.append(f'> "{proof.relevant_text.strip()}"\n')
                 if proof.matched_iocs:
                     md.append(f"- **Corroborated Indicators:** {', '.join([f'`{ioc}`' for ioc in proof.matched_iocs])}")
                 md.append(f"- **Retrieved Document ID:** `{proof.doc_id}` | **Relevance Rank Score:** {proof.retrieval_score:.2f}\n")
@@ -96,8 +106,8 @@ class AttributionReportGenerator:
     def generate_json_report(result: FusionAnalysisResult) -> Dict[str, Any]:
         return {
             "metadata": {
-                "generated_at": datetime.utcnow().isoformat(),
-                "engine": "NexusCTI v1.0",
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "engine": "NexusCTI v1.1",
                 "framework": "Hybrid GNN + Text-Grounded RAG"
             },
             "investigation": {
@@ -106,8 +116,8 @@ class AttributionReportGenerator:
                 "hallucination_risk": result.hallucination_risk,
                 "synergistic_rationale": result.synergistic_rationale
             },
-            "top_attribution": result.top_actor.dict() if result.top_actor else None,
-            "all_candidates": [c.dict() for c in result.all_candidates],
-            "graph_trail": result.graph_trail.dict() if result.graph_trail else None,
-            "narrative_proofs": [p.dict() for p in result.narrative_proofs]
+            "top_attribution": _dump_model(result.top_actor),
+            "all_candidates": [_dump_model(c) for c in result.all_candidates],
+            "graph_trail": _dump_model(result.graph_trail),
+            "narrative_proofs": [_dump_model(p) for p in result.narrative_proofs]
         }
